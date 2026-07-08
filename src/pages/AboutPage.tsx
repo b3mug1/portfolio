@@ -4,26 +4,26 @@ import { education, journeyTimeline } from "@/data/site";
 import { useSeo } from "@/utils/seo";
 
 export default function AboutPage() {
-  useSeo("About | Bekzat", "Professional summary, education, and backend engineering journey of Bekzat.");
+  useSeo("About | Murat Bekzat Gizatuly", "Profile, education, and engineering journey of Murat Bekzat Gizatuly.");
 
   return (
     <div className="mx-auto w-[min(1120px,90%)] py-20">
       <h1 className="text-4xl font-bold text-white md:text-5xl">About Me</h1>
       <p className="mt-6 max-w-3xl text-slate-300">
-        I am a backend developer passionate about building dependable software systems that scale with product growth. My focus is writing clear, testable Python services that combine performance with long-term maintainability.
+        I am Murat Bekzat Gizatuly, a motivated Python Developer and 3rd-year Software Engineering student at Astana IT University. I focus on scalable backend systems, practical API design, and clean engineering workflows.
       </p>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <Card>
           <h2 className="text-xl font-semibold text-white">Professional Summary</h2>
           <p className="mt-3 text-slate-300">
-            I work across API design, database modeling, and deployment automation. I collaborate closely with product teams to translate business requirements into resilient backend architecture.
+            I have hands-on internship experience in Python and Go development. I build web applications and REST APIs, optimize backend performance, and collaborate in team environments to ship reliable features.
           </p>
         </Card>
         <Card>
           <h2 className="text-xl font-semibold text-white">Interests</h2>
           <p className="mt-3 text-slate-300">
-            Distributed systems, observability, infrastructure reliability, and performance optimization in real production workloads.
+            Backend architecture, authentication systems, role-based access control, realtime communication, and practical AI applications.
           </p>
         </Card>
       </div>

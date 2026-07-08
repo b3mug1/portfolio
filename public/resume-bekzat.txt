@@ -1,3 +1,24 @@
-Bekzat - Backend Developer Resume Placeholder
+Murat Bekzat Gizatuly
+Python Developer | Software Engineering Student (3rd year)
+Expected graduation: 2027
 
-Replace this file with your final PDF resume.
+Location: Astana, Kazakhstan
+Phone: +7 777 283 0923
+Email: intelect3235@gmail.com
+Telegram: @gizatuly_b
+GitHub: https://github.com/b3mug1
+
+Summary:
+Motivated Python Developer and Software Engineering student at Astana IT University.
+Practical experience building scalable web applications and REST APIs with Python and FastAPI.
+Hands-on with PostgreSQL, MongoDB, Docker, and Git.
+
+Experience:
+- Golang Developer Intern, Alem.ai Foundation (Jun 2026 - Jul 2026)
+- Python Developer, Zimala (Jan 2026 - Mar 2026)
+- Tester, Talap Academy (Oct 2025 - Dec 2025)
+
+Certificates:
+- IT Essentials (Cisco Networking Academy)
+- Artificial Intelligence and Applications (Huawei ICT Academy)
+- Linux Essentials (Cisco Networking Academy)

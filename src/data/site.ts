@@ -13,139 +13,151 @@ export const navLinks = [
 export const skillCategories: SkillCategory[] = [
   {
     title: "Backend",
-    skills: ["Python", "FastAPI", "Django", "Flask"]
+    skills: ["Python", "FastAPI", "Go", "Node.js"]
   },
   {
     title: "Database",
-    skills: ["PostgreSQL", "Redis", "MongoDB"]
+    skills: ["PostgreSQL", "MongoDB", "NoSQL"]
   },
   {
     title: "DevOps",
-    skills: ["Docker", "Linux", "Nginx", "GitHub Actions"]
+    skills: ["Docker", "Docker Compose", "Linux", "GitHub"]
   },
   {
     title: "Architecture",
-    skills: ["REST API", "JWT", "RabbitMQ", "Clean Architecture", "Microservices"]
+    skills: ["REST API", "Authentication", "RBAC", "Real-time Communication", "Data Analytics"]
   },
   {
     title: "Tools",
-    skills: ["Git", "VS Code", "PyCharm", "Postman"]
+    skills: ["Git", "Postman", "Swagger", "RabbitMQ", "HTML5", "CSS3", "JavaScript"]
+  },
+  {
+    title: "Languages",
+    skills: ["Kazakh (Native)", "English (B1)", "Russian (B2)"]
   }
 ];
 
 export const projects: Project[] = [
   {
-    id: "neon-queue",
-    title: "Neon Queue",
-    summary: "High-throughput job orchestration platform for async workloads.",
+    id: "auth-analytics-platform",
+    title: "Auth Analytics Platform",
+    summary: "Full-stack web platform with secure authentication and user analytics.",
     description:
-      "Neon Queue is a backend-heavy platform for scheduling and processing millions of tasks with fault-tolerant workers, retry policies, dead-letter queues, and observability dashboards.",
+      "A production-style student project focused on secure authentication, role-based access control, and user activity analytics with scalable API architecture.",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80",
-    tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "RabbitMQ", "Docker"],
-    features: ["Priority queues", "Retry engine", "Rate-limited workers", "Live metrics"],
-    githubUrl: "https://github.com/bekzat/neon-queue",
-    liveUrl: "https://neon-queue-demo.vercel.app"
+    tech: ["Python", "FastAPI", "PostgreSQL", "Docker", "JWT"],
+    features: ["JWT authentication", "Role-based access", "Dashboard metrics", "REST endpoints"],
+    githubUrl: "https://github.com/b3mug1",
+    liveUrl: "https://b3mug1.dev/projects/auth-analytics-platform"
   },
   {
-    id: "ledger-guard",
-    title: "Ledger Guard",
-    summary: "Financial API platform with audit-safe architecture.",
+    id: "realtime-collab-api",
+    title: "Realtime Collaboration API",
+    summary: "Realtime messaging and collaboration backend with event-driven flows.",
     description:
-      "Ledger Guard delivers secure accounting APIs with strict role-based access, event sourcing for traceability, and compliance-friendly exports for enterprise workflows.",
+      "A backend-first project implementing realtime communication patterns and asynchronous processing with reliable API contracts and service integration.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    tech: ["Django", "PostgreSQL", "Redis", "JWT", "Nginx"],
-    features: ["Event log", "Role policies", "Secure webhooks", "Reconciliation tooling"],
-    githubUrl: "https://github.com/bekzat/ledger-guard",
-    liveUrl: "https://ledger-guard.vercel.app"
+    tech: ["FastAPI", "RabbitMQ", "MongoDB", "Docker", "Postman"],
+    features: ["Realtime channels", "Async workers", "Message events", "Integration tests"],
+    githubUrl: "https://github.com/b3mug1",
+    liveUrl: "https://b3mug1.dev/projects/realtime-collab-api"
   },
   {
-    id: "trace-pulse",
-    title: "Trace Pulse",
-    summary: "Observability-first microservices tracing suite.",
+    id: "go-learning-systems",
+    title: "Go Learning Systems",
+    summary: "Algorithmic and system-level Go projects from internship practice.",
     description:
-      "Trace Pulse aggregates logs, traces, and service-level metrics to make root-cause detection faster across distributed Python services.",
+      "A collection of Go projects that cover data structures, sorting/searching algorithms, interfaces, pointers, and command-line automation scripts.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    tech: ["FastAPI", "Flask", "MongoDB", "Docker", "GitHub Actions"],
-    features: ["Trace timeline", "Error clustering", "Deployment markers", "SLA alerting"],
-    githubUrl: "https://github.com/bekzat/trace-pulse",
-    liveUrl: "https://trace-pulse.vercel.app"
+    tech: ["Go", "Git", "Linux", "Bash", "Docker"],
+    features: ["Data structures", "Sorting and searching", "CLI tooling", "Code quality focus"],
+    githubUrl: "https://github.com/b3mug1",
+    liveUrl: "https://b3mug1.dev/projects/go-learning-systems"
   }
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    period: "2024 - Present",
-    role: "Senior Backend Developer",
-    company: "CloudScale Systems",
-    details: "Led architecture and delivery of microservice APIs for fintech and SaaS clients.",
+    period: "Jun 2026 - Jul 2026",
+    role: "Golang Developer Intern",
+    company: "Alem.ai Foundation",
+    details: "Developed collaborative full-scale software solutions and improved algorithmic and system-level engineering skills.",
     achievements: [
-      "Reduced average endpoint latency by 42% through caching and query optimization.",
-      "Designed CI/CD pipelines with quality gates and zero-downtime deploys.",
-      "Introduced event-driven workflows with RabbitMQ for better scalability."
+      "Implemented core data structures and optimized sorting and searching algorithms in Go.",
+      "Applied advanced Go features including pointers, memory semantics, and interfaces.",
+      "Built automation scripts in Bash to speed up setup and repetitive development tasks.",
+      "Collaborated in team mini-projects and a final Go application delivery."
     ]
   },
   {
-    period: "2022 - 2024",
-    role: "Backend Engineer",
-    company: "Fluxline Labs",
-    details: "Built robust Python services and internal tooling for product teams.",
-    achievements: [
-      "Implemented a unified authentication gateway using JWT and refresh rotation.",
-      "Containerized platform workloads with Docker and Nginx ingress.",
-      "Mentored junior developers on architecture and clean code practices."
-    ]
-  },
-  {
-    period: "2020 - 2022",
+    period: "Jan 2026 - Mar 2026",
     role: "Python Developer",
-    company: "ByteForge",
-    details: "Developed APIs, background jobs, and integrations for startup products.",
+    company: "Zimala",
+    details: "Developed and optimized backend services with Python and FastAPI for web products.",
     achievements: [
-      "Created reusable service templates to accelerate delivery cycles.",
-      "Built monitoring dashboards that reduced incident response time.",
-      "Maintained high test coverage in critical billing services."
+      "Reduced data processing time by 20% through query and API optimization.",
+      "Improved server-side performance by 30% using asynchronous processing and efficient database patterns.",
+      "Designed and maintained RESTful APIs, improving reliability and scalability.",
+      "Containerized applications with Docker to simplify deployment and setup."
+    ]
+  },
+  {
+    period: "Oct 2025 - Dec 2025",
+    role: "Tester",
+    company: "Talap Academy",
+    details: "Performed QA processes for educational products and team feature releases.",
+    achievements: [
+      "Conducted testing based on developed test scenarios and test cases.",
+      "Performed regression and integration testing and fixed identified bugs.",
+      "Prepared test data and created templates and guidelines for documentation.",
+      "Contributed to delivery by reducing issue turnaround time with the team."
     ]
   }
 ];
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "scalable-apis",
-    title: "Designing Scalable Python APIs for Real-World Traffic",
-    excerpt: "A practical guide to architecture trade-offs, caching, and reliability patterns.",
-    date: "2026-05-16",
-    readTime: "8 min",
-    tags: ["FastAPI", "Architecture", "Performance"]
+    id: "it-essentials-cisco",
+    title: "IT Essentials - Cisco Networking Academy",
+    excerpt: "Core IT fundamentals including system basics, networking, and troubleshooting.",
+    date: "2026",
+    readTime: "Certificate",
+    tags: ["Cisco", "IT Fundamentals"]
   },
   {
-    id: "clean-architecture",
-    title: "Clean Architecture in Backend Teams",
-    excerpt: "What to keep, what to avoid, and how to make architecture practical.",
-    date: "2026-03-09",
-    readTime: "6 min",
-    tags: ["Clean Architecture", "Python"]
+    id: "huawei-ai-applications",
+    title: "Artificial Intelligence and Applications - Huawei ICT Academy",
+    excerpt: "Introduction to practical AI concepts and applied machine learning contexts.",
+    date: "2025",
+    readTime: "Certificate",
+    tags: ["AI", "Huawei ICT"]
   },
   {
-    id: "observability-stack",
-    title: "An Observability Stack That Engineers Actually Use",
-    excerpt: "Metrics, traces, and alerts that improve signal-to-noise in production.",
-    date: "2026-01-28",
-    readTime: "7 min",
-    tags: ["DevOps", "Monitoring"]
+    id: "linux-essentials",
+    title: "Linux Essentials - Cisco Networking Academy",
+    excerpt: "Hands-on Linux fundamentals for development and infrastructure workflows.",
+    date: "2025",
+    readTime: "Certificate",
+    tags: ["Linux", "Cisco"]
   }
 ];
 
 export const journeyTimeline = [
-  { year: "2018", title: "Started coding", text: "Discovered Python and backend engineering fundamentals." },
-  { year: "2020", title: "First production API", text: "Shipped a public API with authentication and analytics." },
-  { year: "2022", title: "Scaled systems", text: "Worked on distributed services and async processing." },
-  { year: "2026", title: "Architecture leadership", text: "Driving backend strategy and mentoring engineering teams." }
+  { year: "2023", title: "University journey started", text: "Joined Astana IT University in Software Engineering." },
+  { year: "2025", title: "QA and testing practice", text: "Completed testing role and improved product quality workflows." },
+  { year: "2026", title: "Backend and Go internships", text: "Worked as Python Developer and Golang Developer Intern." },
+  { year: "2027", title: "Expected graduation", text: "Completing 3rd-year path and preparing for full-time backend role." }
 ];
 
 export const education = [
   {
     school: "Astana IT University",
-    degree: "BSc in Computer Science",
-    period: "2016 - 2020"
+    degree: "Software Engineering, 3rd-year student (Expected graduation: 2027)",
+    period: "2023 - 2027"
+  },
+  {
+    school: "Secondary School",
+    degree: "General Education",
+    period: "Graduated in 2024"
   }
 ];

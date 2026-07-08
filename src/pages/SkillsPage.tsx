@@ -3,12 +3,12 @@ import { skillCategories } from "@/data/site";
 import { useSeo } from "@/utils/seo";
 
 export default function SkillsPage() {
-  useSeo("Skills | Bekzat", "Technical skillset of Bekzat across backend, databases, DevOps, and architecture.");
+  useSeo("Skills | Murat Bekzat Gizatuly", "Technical skills of Murat Bekzat Gizatuly across backend, databases, DevOps, and QA workflows.");
 
   return (
     <div className="mx-auto w-[min(1120px,90%)] py-20">
       <h1 className="text-4xl font-bold text-white md:text-5xl">Skills</h1>
-      <p className="mt-4 max-w-2xl text-slate-300">A toolkit built around Python services, cloud-native delivery, and scalable architecture patterns.</p>
+      <p className="mt-4 max-w-2xl text-slate-300">A practical toolkit built through internship experience, academic projects, and backend-focused development.</p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category, index) => (

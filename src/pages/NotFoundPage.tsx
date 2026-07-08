@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useSeo } from "@/utils/seo";
 
 export default function NotFoundPage() {
-  useSeo("404 | Bekzat", "Page not found.");
+  useSeo("404 | Murat Bekzat Gizatuly", "Page not found.");
 
   return (
     <div className="mx-auto grid min-h-[60vh] w-[min(800px,90%)] place-items-center py-20 text-center">

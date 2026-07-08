@@ -10,7 +10,7 @@ import { useSeo } from "@/utils/seo";
 const allTech = ["All", ...Array.from(new Set(projects.flatMap((project) => project.tech)))];
 
 export default function ProjectsPage() {
-  useSeo("Projects | Bekzat", "Backend and platform projects by Bekzat with detailed architecture and stack info.");
+  useSeo("Projects | Murat Bekzat Gizatuly", "Student and internship projects by Murat Bekzat Gizatuly with backend and full-stack focus.");
 
   const [query, setQuery] = useState("");
   const [activeTech, setActiveTech] = useState("All");

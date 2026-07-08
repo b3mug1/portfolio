@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const KEY = "bekzat-theme";
+const KEY = "murat-portfolio-theme";
 
 export type ThemeMode = "dark" | "light";
 

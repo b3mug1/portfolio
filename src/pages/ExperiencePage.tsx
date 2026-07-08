@@ -3,12 +3,12 @@ import { experience } from "@/data/site";
 import { useSeo } from "@/utils/seo";
 
 export default function ExperiencePage() {
-  useSeo("Experience | Bekzat", "Professional backend engineering experience and achievements.");
+  useSeo("Experience | Murat Bekzat Gizatuly", "Internship and practical backend experience of Murat Bekzat Gizatuly.");
 
   return (
     <div className="mx-auto w-[min(980px,90%)] py-20">
       <h1 className="text-4xl font-bold text-white md:text-5xl">Experience</h1>
-      <p className="mt-4 text-slate-300">A timeline of backend roles, projects, and measurable impact.</p>
+      <p className="mt-4 text-slate-300">A timeline of internships, QA work, and backend development impact.</p>
 
       <div className="mt-12 border-l border-white/10 pl-6">
         {experience.map((item, index) => (

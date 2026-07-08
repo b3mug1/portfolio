@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Send } from "lucide-react";
+import { ArrowRight, Download, Github, Mail, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -14,8 +14,8 @@ const contributionCells = Array.from({ length: 140 }, (_, index) => (index * 17 
 
 export default function HomePage() {
   useSeo(
-    "Bekzat | Backend Developer",
-    "Portfolio of Bekzat, backend developer focused on Python, scalable APIs, and microservices."
+    "Murat Bekzat Gizatuly | Python Developer",
+    "Portfolio of Murat Bekzat Gizatuly, 3rd-year Software Engineering student focused on Python, FastAPI, and scalable web applications."
   );
 
   const offset = useParallax(24);
@@ -41,7 +41,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
             >
-              Hi, I&apos;m Bekzat.
+              Hi, I&apos;m Murat Bekzat.
             </motion.h1>
             <motion.p
               className="mt-4 text-2xl font-semibold text-slate-200"
@@ -49,7 +49,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              Backend Developer and Python Engineer
+              Python Developer and Software Engineering Student
             </motion.p>
             <motion.p
               className="mt-6 max-w-xl text-base leading-relaxed text-slate-300"
@@ -57,7 +57,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
             >
-              I build secure, scalable backend platforms with clean architecture, fast APIs, and reliable delivery pipelines. I focus on real-world performance, maintainability, and product velocity.
+              I am a 3rd-year Software Engineering student at Astana IT University, graduating in 2027. I build scalable web applications and RESTful APIs with Python, FastAPI, PostgreSQL, MongoDB, Docker, and Git.
             </motion.p>
             <motion.div
               className="mt-9 flex flex-wrap gap-3"
@@ -80,13 +80,13 @@ export default function HomePage() {
               </Link>
             </motion.div>
             <div className="mt-8 flex items-center gap-3 text-slate-400">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-2 hover:text-white">
+              <a href="https://github.com/b3mug1" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-2 hover:text-white">
                 <Github size={16} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-2 hover:text-white">
-                <Linkedin size={16} />
+              <a href="mailto:intelect3235@gmail.com" className="rounded-full border border-white/10 p-2 hover:text-white">
+                <Mail size={16} />
               </a>
-              <a href="https://t.me" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-2 hover:text-white">
+              <a href="https://t.me/gizatuly_b" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 p-2 hover:text-white">
                 <Send size={16} />
               </a>
             </div>
@@ -101,15 +101,15 @@ export default function HomePage() {
             <div className="relative z-10 space-y-4">
               <Card className="bg-black/35">
                 <p className="text-sm text-slate-300">Current Focus</p>
-                <p className="mt-2 text-xl font-semibold text-white">Distributed API Systems</p>
+                <p className="mt-2 text-xl font-semibold text-white">Backend Development and Applied AI Learning</p>
               </Card>
               <Card className="bg-black/35">
                 <p className="text-sm text-slate-300">Core Stack</p>
-                <p className="mt-2 text-white">Python, FastAPI, PostgreSQL, Redis, Docker</p>
+                <p className="mt-2 text-white">Python, FastAPI, PostgreSQL, MongoDB, Docker, Go</p>
               </Card>
               <Card className="bg-black/35">
                 <p className="text-sm text-slate-300">Availability</p>
-                <p className="mt-2 font-medium text-emerald-300">Open to senior backend roles</p>
+                <p className="mt-2 font-medium text-emerald-300">Open to internships and junior backend roles</p>
               </Card>
             </div>
           </motion.div>
@@ -199,7 +199,7 @@ export default function HomePage() {
             </Card>
             <Card>
               <p className="text-sm text-slate-400">Top Languages</p>
-              <p className="mt-2 text-sm text-slate-200">Python, TypeScript, SQL, Bash</p>
+              <p className="mt-2 text-sm text-slate-200">Python, Go, JavaScript, SQL</p>
             </Card>
             <Card>
               <p className="text-sm text-slate-400">Latest Commits</p>

@@ -14,7 +14,7 @@ type FormState = {
 const initialState: FormState = { name: "", email: "", message: "" };
 
 export default function ContactPage() {
-  useSeo("Contact | Bekzat", "Get in touch with Bekzat for backend engineering opportunities and collaboration.");
+  useSeo("Contact | Murat Bekzat Gizatuly", "Contact Murat Bekzat Gizatuly for internship and junior backend opportunities.");
   const { pushToast } = useToast();
   const [form, setForm] = useState(initialState);
   const [errors, setErrors] = useState<Partial<FormState>>({});
@@ -48,7 +48,7 @@ export default function ContactPage() {
   return (
     <div className="mx-auto w-[min(980px,90%)] py-20">
       <h1 className="text-4xl font-bold text-white md:text-5xl">Contact</h1>
-      <p className="mt-4 max-w-2xl text-slate-300">Let&apos;s discuss backend roles, consulting, or product architecture collaboration.</p>
+      <p className="mt-4 max-w-2xl text-slate-300">Let&apos;s discuss internship opportunities, junior backend roles, or student project collaboration.</p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <form onSubmit={onSubmit} className="space-y-4 rounded-2xl border border-white/10 bg-surface/70 p-6">
@@ -95,17 +95,20 @@ export default function ContactPage() {
         <aside className="rounded-2xl border border-white/10 bg-surface/70 p-6">
           <h2 className="text-xl font-semibold text-white">Social Links</h2>
           <div className="mt-5 space-y-3">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
+            <a href="https://github.com/b3mug1" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
               <Github size={18} /> GitHub
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
               <Linkedin size={18} /> LinkedIn
             </a>
-            <a href="https://t.me" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
+            <a href="https://t.me/gizatuly_b" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
               <Send size={18} /> Telegram
             </a>
-            <a href="mailto:bekzat@example.com" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
-              <Mail size={18} /> bekzat@example.com
+            <a href="mailto:intelect3235@gmail.com" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
+              <Mail size={18} /> intelect3235@gmail.com
+            </a>
+            <a href="tel:+77772830923" className="inline-flex items-center gap-3 text-slate-200 hover:text-white">
+              <Mail size={18} /> +7 777 283 0923
             </a>
           </div>
         </aside>
