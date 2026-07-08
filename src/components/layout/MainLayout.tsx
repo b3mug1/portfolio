@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { Navbar } from "@/components/layout/Navbar";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { useTheme } from "@/hooks/useTheme";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 
@@ -21,7 +20,6 @@ export function MainLayout() {
 
   return (
     <div className="min-h-screen bg-bg text-text">
-      <CustomCursor />
       <AnimatePresence>{booting ? <LoadingScreen /> : null}</AnimatePresence>
 
       <motion.div className="fixed left-0 top-0 z-[55] h-1 bg-gradient-to-r from-primary to-accent" style={{ width: `${progress * 100}%` }} />

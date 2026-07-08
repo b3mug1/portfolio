@@ -16,7 +16,6 @@ body {
   background: #0b0f19;
   color: #f8fafc;
   font-family: Geist, Inter, Satoshi, system-ui, sans-serif;
-  cursor: none;
 }
 
 html.light {
@@ -83,8 +82,3 @@ html.light .text-slate-400 {
   border-radius: 999px;
 }
 
-@media (max-width: 768px) {
-  body {
-    cursor: auto;
-  }
-}
