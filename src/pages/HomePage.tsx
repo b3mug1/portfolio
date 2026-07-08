@@ -198,6 +198,10 @@ export default function HomePage() {
               <p className="mt-2 text-3xl font-bold text-white">312</p>
             </Card>
             <Card>
+              <p className="text-sm text-slate-400">Top Languages</p>
+              <p className="mt-2 text-sm text-slate-200">Python, TypeScript, SQL, Bash</p>
+            </Card>
+            <Card>
               <p className="text-sm text-slate-400">Latest Commits</p>
               <p className="mt-2 text-sm text-slate-200">12 commits this week across APIs and infra repositories.</p>
             </Card>
