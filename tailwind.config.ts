@@ -6,12 +6,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0B0F19",
-        surface: "#111827",
-        primary: "#3B82F6",
-        accent: "#8B5CF6",
+        bg: "#1d1716",
+        surface: "#402a23",
+        primary: "#a55233",
+        accent: "#f3bc77",
         text: "#F8FAFC",
-        muted: "#94A3B8"
+        muted: "#e6cfbd"
       },
       fontFamily: {
         sans: ["Geist", "Inter", "Satoshi", "system-ui", "sans-serif"]
@@ -21,8 +21,8 @@ const config: Config = {
         card: "0 12px 28px rgba(0,0,0,0.35)"
       },
       backgroundImage: {
-        "hero-grid": "radial-gradient(circle at 1px 1px, rgba(148,163,184,0.16) 1px, transparent 0)",
-        "aurora": "linear-gradient(120deg, rgba(59,130,246,0.28), rgba(139,92,246,0.24), rgba(16,185,129,0.2))"
+        "hero-grid": "radial-gradient(circle at 1px 1px, rgba(243,188,119,0.18) 1px, transparent 0)",
+        "aurora": "linear-gradient(120deg, rgba(29,23,22,0.95), rgba(64,42,35,0.9), rgba(165,82,51,0.72), rgba(243,188,119,0.6))"
       },
       animation: {
         float: "float 8s ease-in-out infinite",
