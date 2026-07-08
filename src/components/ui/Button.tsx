@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import type { ButtonHTMLAttributes } from "react";
+import type { HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/cn";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = HTMLMotionProps<"button"> & {
   variant?: "primary" | "secondary" | "ghost";
 };
 
