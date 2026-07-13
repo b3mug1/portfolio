@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import { uiCopy } from "@/data/content";
+import { useLocale } from "@/hooks/useLocale";
 
 export function LoadingScreen() {
+  const { locale } = useLocale();
+
   return (
     <motion.div
       className="fixed inset-0 z-[80] grid place-items-center bg-bg"
@@ -9,7 +13,7 @@ export function LoadingScreen() {
       transition={{ delay: 1, duration: 0.6 }}
     >
       <div className="text-center">
-        <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Loading portfolio</p>
+        <p className="text-xs uppercase tracking-[0.28em] text-muted">{uiCopy[locale].loading}</p>
         <motion.div
           className="mx-auto mt-4 h-1 w-52 overflow-hidden rounded-full bg-white/10"
           initial={{ opacity: 0.6 }}

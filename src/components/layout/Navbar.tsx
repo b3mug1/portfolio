@@ -2,10 +2,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { navLinks } from "@/data/site";
+import { navLinks, t } from "@/data/site";
+import { uiCopy } from "@/data/content";
 import { cn } from "@/lib/cn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import type { ThemeMode } from "@/hooks/useTheme";
+import { useLocale } from "@/hooks/useLocale";
 
 type NavbarProps = {
   mode: ThemeMode;
@@ -14,12 +17,14 @@ type NavbarProps = {
 
 export function Navbar({ mode, onToggleTheme }: NavbarProps) {
   const [open, setOpen] = useState(false);
+  const { locale, toggleLocale } = useLocale();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-bg/60 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-bg/70 backdrop-blur-2xl">
       <div className="mx-auto flex w-[min(1120px,90%)] items-center justify-between py-4">
-        <Link to="/" className="text-lg font-bold tracking-tight text-white">
-          Bekzat<span className="text-primary">.</span>
+        <Link to="/" className="inline-flex items-center gap-2">
+          <img src="/favicon.png" alt={uiCopy[locale].brand} className="h-10 w-10 rounded-xl object-cover" />
+          <span className="sr-only">{uiCopy[locale].brand}</span>
         </Link>
 
         <nav className="hidden items-center gap-2 md:flex">
@@ -29,21 +34,23 @@ export function Navbar({ mode, onToggleTheme }: NavbarProps) {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  "rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:text-white",
-                  isActive && "bg-white/10 text-white"
+                  "rounded-full px-3 py-2 text-sm text-muted transition hover:text-text",
+                  isActive && "bg-white/10 text-text"
                 )
               }
             >
-              {link.label}
+              {t(link.label, locale)}
             </NavLink>
           ))}
           <ThemeToggle mode={mode} onToggle={onToggleTheme} />
+          <LanguageToggle locale={locale} onToggle={toggleLocale} />
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle mode={mode} onToggle={onToggleTheme} />
+          <LanguageToggle locale={locale} onToggle={toggleLocale} />
           <button
-            className="rounded-lg border border-white/10 p-2 text-slate-200"
+            className="rounded-full border border-white/10 p-2 text-text"
             onClick={() => setOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -68,14 +75,18 @@ export function Navbar({ mode, onToggleTheme }: NavbarProps) {
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     cn(
-                      "rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:text-white",
-                      isActive && "bg-white/10 text-white"
+                      "rounded-xl px-3 py-2 text-sm text-muted transition hover:text-text",
+                      isActive && "bg-white/10 text-text"
                     )
                   }
                 >
-                  {link.label}
+                  {t(link.label, locale)}
                 </NavLink>
               ))}
+              <div className="mt-3 flex flex-wrap gap-2">
+                <ThemeToggle mode={mode} onToggle={onToggleTheme} />
+                <LanguageToggle locale={locale} onToggle={toggleLocale} />
+              </div>
             </div>
           </motion.aside>
         ) : null}

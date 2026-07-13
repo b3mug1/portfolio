@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bekzat.dev/sitemap.xml
+Sitemap: https://b3mug1.dev/sitemap.xml
