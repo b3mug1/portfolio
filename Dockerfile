@@ -1,6 +1,12 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+ARG VITE_TELEGRAM_BOT_TOKEN
+ARG VITE_TELEGRAM_CHAT_ID
+
+ENV VITE_TELEGRAM_BOT_TOKEN=${VITE_TELEGRAM_BOT_TOKEN}
+ENV VITE_TELEGRAM_CHAT_ID=${VITE_TELEGRAM_CHAT_ID}
+
 COPY package.json package-lock.json* ./
 RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 

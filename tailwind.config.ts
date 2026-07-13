@@ -6,12 +6,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#1d1716",
-        surface: "#402a23",
-        primary: "#a55233",
-        accent: "#f3bc77",
-        text: "#F8FAFC",
-        muted: "#e6cfbd"
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        text: "rgb(var(--color-text) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["Geist", "Inter", "Satoshi", "system-ui", "sans-serif"]
@@ -21,8 +21,8 @@ const config: Config = {
         card: "0 12px 28px rgba(0,0,0,0.35)"
       },
       backgroundImage: {
-        "hero-grid": "radial-gradient(circle at 1px 1px, rgba(243,188,119,0.18) 1px, transparent 0)",
-        "aurora": "linear-gradient(120deg, rgba(29,23,22,0.95), rgba(64,42,35,0.9), rgba(165,82,51,0.72), rgba(243,188,119,0.6))"
+        "hero-grid": "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0)",
+        "aurora": "linear-gradient(120deg, rgba(var(--color-bg),0.96), rgba(var(--color-surface),0.94), rgba(var(--color-primary),0.7), rgba(var(--color-accent),0.55))"
       },
       animation: {
         float: "float 8s ease-in-out infinite",
