@@ -21,7 +21,7 @@ export default function HomePage() {
   const [githubStats, setGithubStats] = useState<GithubStats | null>(null);
 
   useSeo(
-    locale === "en" ? "Murat Bekzat Gizatuly | Python Developer" : "Мурат Бекзат Гизатулы | Python-разработчик",
+    locale === "en" ? "Bekzat-Portfolio" : "Бекзат-Портфолио",
     locale === "en"
       ? "Portfolio of Murat Bekzat Gizatuly, 3rd-year Software Engineering student focused on Python, FastAPI, and scalable web applications."
       : "Портфолио Мурата Бекзата Гизатулы, студента 3 курса Software Engineering, который работает с Python, FastAPI и масштабируемыми веб-приложениями."
