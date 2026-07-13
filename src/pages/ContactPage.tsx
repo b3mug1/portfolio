@@ -135,8 +135,8 @@ export default function ContactPage() {
             <a href="mailto:intelect3235@gmail.com" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
               <Mail size={18} /> intelect3235@gmail.com
             </a>
-            <a href="tel:+77772830923" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
-              <Mail size={18} /> +7 777 283 0923
+            <a href="tel:+77772380923" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
+              <Mail size={18} /> +7 777 238 0923
             </a>
           </div>
         </aside>
