@@ -1,0 +1,1 @@
+import{r as o}from"./index-fLU9SoBA.js";function r(t,n){o.useEffect(()=>{document.title=t;let e=document.querySelector('meta[name="description"]');e||(e=document.createElement("meta"),e.setAttribute("name","description"),document.head.appendChild(e)),e.setAttribute("content",n)},[t,n])}export{r as u};

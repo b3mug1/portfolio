@@ -1,0 +1,1 @@
+import{j as a,d as o}from"./index-fLU9SoBA.js";function e({className:r,children:d}){return a.jsx("div",{className:o("rounded-2xl border border-white/10 bg-surface/70 p-5 shadow-card backdrop-blur-md",r),children:d})}export{e as C};

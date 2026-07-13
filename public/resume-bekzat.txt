@@ -1,24 +1,73 @@
-Murat Bekzat Gizatuly
-Python Developer | Software Engineering Student (3rd year)
-Expected graduation: 2027
+Мурат Бекзат Гизатулы
 
-Location: Astana, Kazakhstan
-Phone: +7 777 283 0923
-Email: intelect3235@gmail.com
-Telegram: @gizatuly_b
+Контакты
+- Телефон: +7 (777) 238-09-23
+- Email: intelect23235@gmail.com
+- Telegram: @gizatuly_b
+- Город: Астана, Казахстан
+
+Желаемая должность
+Python-разработчик
+
+Тип занятости и формат работы
+- Полная занятость / частичная занятость / проектная работа / стажировка
+- На месте работодателя / удаленно / гибрид
+
+Опыт работы (8 месяцев)
+
+Alem.ai Foundation, Астана
+Golang Developer Intern (июнь 2026 - июль 2026)
+- Developed individual and collaborative full-scale software solutions using Go (Golang).
+- Implemented core data structures (arrays, slices, maps, linked lists) and optimized sorting/searching algorithms.
+- Applied advanced Go features: pointer semantics, user-defined structs, implicit interfaces.
+- Developed, presented, and defended two team mini-projects and one final Go application.
+- Collaborated in team Git workflow with branching and conflict resolution strategies.
+- Created Bash scripts (macOS) for automation of setup and file processing tasks.
+
+Zimalab, Астана
+Python-разработчик (январь 2026 - март 2026)
+- Developed and optimized backend services using Python and FastAPI.
+- Reduced data processing time by 20% through query and API optimization.
+- Improved server-side performance by 30% using asynchronous processing and efficient DB interactions.
+- Designed and maintained RESTful APIs to improve reliability and scalability.
+- Containerized applications with Docker to simplify deployment.
+- Collaborated with team to deliver features and resolve issues on time.
+
+Talap Academy, Алматы
+Тестировщик (октябрь 2025 - декабрь 2025)
+- Conducted testing using test scenarios and test cases.
+- Performed regression and integration testing.
+- Fixed identified bugs and prepared test data.
+- Created templates and guidelines for test documentation.
+- Performed security testing.
+
+Образование
+Astana IT University
+Software Engineering (Высшее)
+
+Сертификаты
+- IT Essentials — Cisco Networking Academy (2026)
+- Artificial Intelligence and Applications — Huawei ICT Academy (2025)
+- Linux Essentials — Cisco Networking Academy (2025)
+- Overview AI — Huawei ICT Academy (2025)
+
+Навыки
+Python, FastAPI, REST API, PostgreSQL, MongoDB, Docker, Docker Compose,
+Git, GitHub, RabbitMQ, Linux, JavaScript, Node.js, HTML5, CSS3, NoSQL,
+Postman, Swagger
+
+Языки
+- Казахский: родной
+- Русский: B2
+- Английский: B1
+
+Обо мне
+Motivated Python Developer and Software Engineering student at Astana IT University with practical
+experience developing scalable web applications and RESTful APIs. Proficient in FastAPI, PostgreSQL,
+MongoDB, Docker, and Git. Developed multiple full-stack projects involving authentication, role-based
+access control, real-time communication, and data analytics. Eager to apply technical skills and grow
+within a collaborative engineering team.
+
 GitHub: https://github.com/b3mug1
 
-Summary:
-Motivated Python Developer and Software Engineering student at Astana IT University.
-Practical experience building scalable web applications and REST APIs with Python and FastAPI.
-Hands-on with PostgreSQL, MongoDB, Docker, and Git.
-
-Experience:
-- Golang Developer Intern, Alem.ai Foundation (Jun 2026 - Jul 2026)
-- Python Developer, Zimala (Jan 2026 - Mar 2026)
-- Tester, Talap Academy (Oct 2025 - Dec 2025)
-
-Certificates:
-- IT Essentials (Cisco Networking Academy)
-- Artificial Intelligence and Applications (Huawei ICT Academy)
-- Linux Essentials (Cisco Networking Academy)
+Обновлено: 6 июля 2026
