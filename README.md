@@ -35,7 +35,7 @@ Premium personal portfolio website for a Backend Developer using React, TypeScri
 1. Install Node.js 20+ and npm.
 2. Install dependencies:
    npm install
-3. Copy `.env.example` to `.env` and fill in Telegram credentials if you want contact form delivery.
+3. Create .env file with a token and chat_id of telegram bot, also don't forget about github access token for showing your real life activity in github
 4. Start development server:
    npm run dev
 5. Build for production:
