@@ -60,6 +60,30 @@ export default function HomePage() {
         followers: 120,
         following: 80,
         forks: 60,
+        activeReposLast30Days: 9,
+        recentRepos: [
+          {
+            name: "locker-management-system",
+            url: "https://github.com/b3mug1/locker-management-system",
+            language: "Python",
+            stars: 12,
+            updatedAt: new Date().toISOString()
+          },
+          {
+            name: "csvision",
+            url: "https://github.com/b3mug1/csvision",
+            language: "Python",
+            stars: 8,
+            updatedAt: new Date().toISOString()
+          },
+          {
+            name: "link-tracker",
+            url: "https://github.com/b3mug1/link-tracker",
+            language: "TypeScript",
+            stars: 5,
+            updatedAt: new Date().toISOString()
+          }
+        ],
         profileUrl: "https://github.com/b3mug1",
         lastSyncedAt: new Date().toISOString()
       }
@@ -77,6 +101,18 @@ export default function HomePage() {
       minute: "2-digit"
     });
   }, [snapshot.lastSyncedAt, locale]);
+
+  const formatRepoDate = (value: string) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return locale === "en" ? "recently" : "недавно";
+    }
+
+    return date.toLocaleDateString(locale === "en" ? "en-US" : "ru-RU", {
+      day: "2-digit",
+      month: "short"
+    });
+  };
 
   return (
     <div>
@@ -254,38 +290,110 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Card>
-            <p className="text-sm text-muted">{locale === "en" ? "Repositories" : "Репозитории"}</p>
-            <p className="mt-2 text-3xl font-bold text-text">{snapshot.repos}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">{locale === "en" ? "Stars" : "Звёзды"}</p>
-            <p className="mt-2 text-3xl font-bold text-text">{snapshot.stars}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">{locale === "en" ? "Top Languages" : "Основные языки"}</p>
-            <p className="mt-2 text-sm text-text">{snapshot.languages.join(", ") || (locale === "en" ? "No data" : "Нет данных")}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">Followers</p>
-            <p className="mt-2 text-3xl font-bold text-text">{snapshot.followers}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">Following</p>
-            <p className="mt-2 text-3xl font-bold text-text">{snapshot.following}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">Forks</p>
-            <p className="mt-2 text-3xl font-bold text-text">{snapshot.forks}</p>
-          </Card>
-          <Card>
-            <p className="text-sm text-muted">{locale === "en" ? "Latest Commits" : "Последние коммиты"}</p>
-            <p className="mt-2 text-sm text-text">
-              {locale === "en"
-                ? `${snapshot.commits} commits this week across repositories.`
-                : `${snapshot.commits} коммитов за эту неделю по репозиториям.`}
-            </p>
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-4">
+            <Card className="overflow-hidden border-white/15 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_42%),rgba(255,255,255,0.03)]">
+              <p className="text-xs uppercase tracking-[0.22em] text-primary">
+                {locale === "en" ? "GitHub Overview" : "Обзор GitHub"}
+              </p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <p className="text-4xl font-black text-text">{snapshot.repos}</p>
+                  <p className="mt-2 text-sm text-muted">
+                    {locale === "en" ? "public repositories in the profile" : "публичных репозиториев в профиле"}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-text">{snapshot.activeReposLast30Days}</p>
+                  <p className="mt-2 text-sm text-muted">
+                    {locale === "en" ? "repositories active in the last 30 days" : "репозиториев с активностью за 30 дней"}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {snapshot.languages.length > 0 ? (
+                  snapshot.languages.map((language) => (
+                    <span key={language} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-text">
+                      {language}
+                    </span>
+                  ))
+                ) : (
+                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-text">
+                    {locale === "en" ? "No language data" : "Нет данных по языкам"}
+                  </span>
+                )}
+              </div>
+            </Card>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Card>
+                <p className="text-sm text-muted">{locale === "en" ? "Stars" : "Звёзды"}</p>
+                <p className="mt-2 text-3xl font-bold text-text">{snapshot.stars}</p>
+              </Card>
+              <Card>
+                <p className="text-sm text-muted">{locale === "en" ? "Followers" : "Подписчики"}</p>
+                <p className="mt-2 text-3xl font-bold text-text">{snapshot.followers}</p>
+              </Card>
+              <Card>
+                <p className="text-sm text-muted">{locale === "en" ? "Forks" : "Форки"}</p>
+                <p className="mt-2 text-3xl font-bold text-text">{snapshot.forks}</p>
+              </Card>
+              <Card>
+                <p className="text-sm text-muted">{locale === "en" ? "Weekly Commits" : "Коммиты за неделю"}</p>
+                <p className="mt-2 text-3xl font-bold text-text">{snapshot.commits}</p>
+              </Card>
+            </div>
+          </div>
+
+          <Card className="border-white/15 bg-white/[0.03]">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.22em] text-primary">
+                  {locale === "en" ? "Recent Repositories" : "Последние репозитории"}
+                </p>
+                <p className="mt-2 text-sm text-muted">
+                  {locale === "en"
+                    ? "Most recently updated repositories from the profile."
+                    : "Репозитории, которые обновлялись последними."}
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 px-3 py-2 text-right">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted">
+                  {locale === "en" ? "Following" : "Подписок"}
+                </p>
+                <p className="mt-1 text-lg font-semibold text-text">{snapshot.following}</p>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3">
+              {snapshot.recentRepos.map((repo) => (
+                <a
+                  key={repo.url}
+                  href={repo.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-text">{repo.name}</p>
+                      <p className="mt-1 text-xs text-muted">
+                        {repo.language ?? (locale === "en" ? "Language not specified" : "Язык не указан")}
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center gap-1 rounded-full border border-white/10 px-2 py-1 text-xs text-muted">
+                      ★ {repo.stars}
+                    </span>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-xs text-muted">
+                    <span>{locale === "en" ? "Updated" : "Обновлён"} {formatRepoDate(repo.updatedAt)}</span>
+                    <span className="inline-flex items-center gap-1">
+                      {locale === "en" ? "Open" : "Открыть"} <ExternalLink size={12} />
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
           </Card>
         </div>
       </section>

@@ -56,6 +56,14 @@ export type GithubStats = {
   followers: number;
   following: number;
   forks: number;
+  activeReposLast30Days: number;
+  recentRepos: Array<{
+    name: string;
+    url: string;
+    language: string | null;
+    stars: number;
+    updatedAt: string;
+  }>;
   profileUrl: string;
   lastSyncedAt: string;
 };

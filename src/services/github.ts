@@ -8,9 +8,13 @@ type GithubUserApi = {
 };
 
 type GithubRepoApi = {
+  name?: string;
+  html_url?: string;
   stargazers_count?: number;
   forks_count?: number;
   language?: string | null;
+  pushed_at?: string;
+  updated_at?: string;
 };
 
 type GithubEventApi = {
@@ -62,6 +66,7 @@ export async function fetchGithubStats(username: string, token?: string): Promis
       .map(([language]) => language);
 
     const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    const monthAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
     const commits = events.reduce((total, event) => {
       if (event.type !== "PushEvent" || !event.created_at) {
         return total;
@@ -75,6 +80,30 @@ export async function fetchGithubStats(username: string, token?: string): Promis
       return total + (event.payload?.size ?? 0);
     }, 0);
 
+    const activeReposLast30Days = repos.filter((repo) => {
+      if (!repo.pushed_at) {
+        return false;
+      }
+
+      const pushedAt = new Date(repo.pushed_at).getTime();
+      return !Number.isNaN(pushedAt) && pushedAt >= monthAgo;
+    }).length;
+
+    const recentRepos = [...repos]
+      .sort((a, b) => {
+        const aUpdated = new Date(a.pushed_at ?? a.updated_at ?? 0).getTime();
+        const bUpdated = new Date(b.pushed_at ?? b.updated_at ?? 0).getTime();
+        return bUpdated - aUpdated;
+      })
+      .slice(0, 3)
+      .map((repo) => ({
+        name: repo.name ?? "unknown",
+        url: repo.html_url ?? `https://github.com/${username}`,
+        language: repo.language ?? null,
+        stars: repo.stargazers_count ?? 0,
+        updatedAt: repo.pushed_at ?? repo.updated_at ?? new Date().toISOString()
+      }));
+
     return {
       repos: user.public_repos ?? 0,
       stars,
@@ -83,6 +112,8 @@ export async function fetchGithubStats(username: string, token?: string): Promis
       followers: user.followers ?? 0,
       following: user.following ?? 0,
       forks,
+      activeReposLast30Days,
+      recentRepos,
       profileUrl: user.html_url ?? `https://github.com/${username}`,
       lastSyncedAt: new Date().toISOString()
     };
