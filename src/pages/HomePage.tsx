@@ -84,6 +84,29 @@ export default function HomePage() {
             updatedAt: new Date().toISOString()
           }
         ],
+        allRepos: [
+          {
+            name: "locker-management-system",
+            url: "https://github.com/b3mug1/locker-management-system",
+            language: "Python",
+            stars: 12,
+            updatedAt: new Date().toISOString()
+          },
+          {
+            name: "csvision",
+            url: "https://github.com/b3mug1/csvision",
+            language: "Python",
+            stars: 8,
+            updatedAt: new Date().toISOString()
+          },
+          {
+            name: "link-tracker",
+            url: "https://github.com/b3mug1/link-tracker",
+            language: "TypeScript",
+            stars: 5,
+            updatedAt: new Date().toISOString()
+          }
+        ],
         profileUrl: "https://github.com/b3mug1",
         lastSyncedAt: new Date().toISOString()
       }
@@ -345,7 +368,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <Card className="border-white/15 bg-white/[0.03]">
+          <div className="space-y-4">
+            <Card className="border-white/15 bg-white/[0.03]">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-primary">
@@ -394,7 +418,59 @@ export default function HomePage() {
                 </a>
               ))}
             </div>
-          </Card>
+            </Card>
+
+            <Card className="border-white/15 bg-white/[0.03]">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-primary">
+                    {locale === "en" ? "All Repositories" : "Все репозитории"}
+                  </p>
+                  <p className="mt-2 text-sm text-muted">
+                    {locale === "en"
+                      ? "Scrollable list of all public repositories from the GitHub profile."
+                      : "Прокручиваемый список всех публичных репозиториев из GitHub-профиля."}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-white/10 px-3 py-2 text-right">
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted">
+                    {locale === "en" ? "Visible" : "Всего"}
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-text">{snapshot.allRepos.length}</p>
+                </div>
+              </div>
+
+              <div className="mt-6 max-h-[28rem] space-y-3 overflow-y-auto pr-2">
+                {snapshot.allRepos.map((repo) => (
+                  <a
+                    key={`all-${repo.url}`}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="text-sm font-semibold text-text">{repo.name}</p>
+                        <p className="mt-1 text-xs text-muted">
+                          {repo.language ?? (locale === "en" ? "Language not specified" : "Язык не указан")}
+                        </p>
+                      </div>
+                      <span className="inline-flex items-center gap-1 rounded-full border border-white/10 px-2 py-1 text-xs text-muted">
+                        ★ {repo.stars}
+                      </span>
+                    </div>
+                    <div className="mt-3 flex items-center justify-between text-xs text-muted">
+                      <span>{locale === "en" ? "Updated" : "Обновлён"} {formatRepoDate(repo.updatedAt)}</span>
+                      <span className="inline-flex items-center gap-1">
+                        {locale === "en" ? "Open" : "Открыть"} <ExternalLink size={12} />
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </div>

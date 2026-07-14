@@ -64,6 +64,13 @@ export type GithubStats = {
     stars: number;
     updatedAt: string;
   }>;
+  allRepos: Array<{
+    name: string;
+    url: string;
+    language: string | null;
+    stars: number;
+    updatedAt: string;
+  }>;
   profileUrl: string;
   lastSyncedAt: string;
 };

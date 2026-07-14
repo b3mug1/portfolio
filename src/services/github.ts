@@ -89,13 +89,12 @@ export async function fetchGithubStats(username: string, token?: string): Promis
       return !Number.isNaN(pushedAt) && pushedAt >= monthAgo;
     }).length;
 
-    const recentRepos = [...repos]
+    const allRepos = [...repos]
       .sort((a, b) => {
         const aUpdated = new Date(a.pushed_at ?? a.updated_at ?? 0).getTime();
         const bUpdated = new Date(b.pushed_at ?? b.updated_at ?? 0).getTime();
         return bUpdated - aUpdated;
       })
-      .slice(0, 3)
       .map((repo) => ({
         name: repo.name ?? "unknown",
         url: repo.html_url ?? `https://github.com/${username}`,
@@ -103,6 +102,8 @@ export async function fetchGithubStats(username: string, token?: string): Promis
         stars: repo.stargazers_count ?? 0,
         updatedAt: repo.pushed_at ?? repo.updated_at ?? new Date().toISOString()
       }));
+
+    const recentRepos = allRepos.slice(0, 3);
 
     return {
       repos: user.public_repos ?? 0,
@@ -114,6 +115,7 @@ export async function fetchGithubStats(username: string, token?: string): Promis
       forks,
       activeReposLast30Days,
       recentRepos,
+      allRepos,
       profileUrl: user.html_url ?? `https://github.com/${username}`,
       lastSyncedAt: new Date().toISOString()
     };
