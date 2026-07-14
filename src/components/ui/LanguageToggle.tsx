@@ -11,11 +11,11 @@ export function LanguageToggle({ locale, onToggle }: LanguageToggleProps) {
     <Button
       variant="ghost"
       onClick={onToggle}
-      className="inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-0 text-xs font-semibold uppercase tracking-[0.18em] text-slate-200"
+      className="nav-item-shell inline-flex h-10 items-center gap-2 rounded-full px-3 py-0 text-xs font-semibold uppercase tracking-[0.18em] text-text"
     >
-      <span className={locale === "en" ? "text-white" : "text-slate-400"}>EN</span>
-      <span className="h-4 w-px bg-white/10" />
-      <span className={locale === "ru" ? "text-white" : "text-slate-400"}>RU</span>
+      <span className={locale === "en" ? "text-text" : "text-muted"}>EN</span>
+      <span className="h-4 w-px bg-white/10 dark:bg-white/10" />
+      <span className={locale === "ru" ? "text-text" : "text-muted"}>RU</span>
     </Button>
   );
 }

@@ -16,7 +16,7 @@ export function ThemeToggle({ mode, onToggle }: ThemeToggleProps) {
     <Button
       variant="ghost"
       onClick={onToggle}
-      className="inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-0 text-xs font-semibold text-slate-200"
+      className="nav-item-shell inline-flex h-10 items-center gap-2 rounded-full px-3 py-0 text-xs font-semibold text-text"
     >
       {mode === "dark" ? <Sun size={16} /> : <Moon size={16} />}
       <span>{mode === "dark" ? uiCopy[locale].themeLight : uiCopy[locale].themeDark}</span>

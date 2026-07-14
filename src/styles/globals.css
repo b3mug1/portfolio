@@ -53,19 +53,43 @@ body {
 
 html.light {
   color-scheme: light;
-  --color-bg: 247 247 245;
-  --color-surface: 255 255 255;
+  --color-bg: 244 239 232;
+  --color-surface: 250 246 239;
   --color-primary: 17 24 39;
-  --color-accent: 82 82 91;
+  --color-accent: 120 106 88;
   --color-text: 17 24 39;
-  --color-muted: 82 82 91;
+  --color-muted: 110 102 92;
 }
 
 html.light body {
   background:
-    radial-gradient(1000px 500px at 10% -10%, rgba(17, 24, 39, 0.04), transparent 55%),
-    radial-gradient(800px 420px at 90% 0%, rgba(17, 24, 39, 0.03), transparent 50%),
+    radial-gradient(1000px 500px at 10% -10%, rgba(126, 101, 74, 0.08), transparent 55%),
+    radial-gradient(800px 420px at 90% 0%, rgba(96, 78, 59, 0.06), transparent 50%),
     linear-gradient(180deg, rgb(var(--color-bg)) 0%, rgb(var(--color-bg)) 100%);
+}
+
+html.light .glass {
+  background: linear-gradient(145deg, rgba(255, 251, 245, 0.78), rgba(245, 238, 228, 0.56));
+  border: 1px solid rgba(120, 106, 88, 0.12);
+}
+
+.nav-item-shell {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.nav-item-shell:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html.light .nav-item-shell {
+  border-color: rgba(120, 106, 88, 0.22);
+  background: rgba(255, 251, 245, 0.72);
+}
+
+html.light .nav-item-shell:hover {
+  background: rgba(255, 248, 240, 0.95);
 }
 
 ::selection {
