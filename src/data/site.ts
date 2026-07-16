@@ -117,6 +117,21 @@ export const projects: Project[] = [
 
 export const experience: ExperienceItem[] = [
   {
+    period: "Jun 2026 - Jul 2026",
+    role: { en: "Golang Developer Intern", ru: "Стажер Golang Developer" },
+    company: "Alem.ai Foundation",
+    details: {
+      en: "Developed collaborative full-scale software solutions and improved algorithmic and system-level engineering skills.",
+      ru: "Создавал совместные полнофункциональные решения и улучшал навыки алгоритмической и системной разработки."
+    },
+    achievements: [
+      { en: "Implemented core data structures and optimized sorting and searching algorithms in Go.", ru: "Реализовал основные структуры данных и оптимизировал алгоритмы сортировки и поиска на Go." },
+      { en: "Applied advanced Go features including pointers, memory semantics, and interfaces.", ru: "Применял продвинутые возможности Go: указатели, семантику памяти и интерфейсы." },
+      { en: "Built automation scripts in Bash to speed up setup and repetitive development tasks.", ru: "Создавал Bash-скрипты для ускорения настройки и повторяющихся задач разработки." },
+      { en: "Collaborated in team mini-projects and a final Go application delivery.", ru: "Участвовал в командных мини-проектах и финальной поставке Go-приложения." }
+    ]
+  },
+  {
     period: "Mar 2026 - May 2026",
     role: { en: "Python Developer", ru: "Python-разработчик" },
     company: "DataArt",
@@ -161,21 +176,6 @@ export const experience: ExperienceItem[] = [
         en: "Configured Docker-based development and testing environments, ensuring consistency, reproducibility, and reliable deployments.",
         ru: "Настроил Docker-окружения для разработки и тестирования, обеспечив согласованность, воспроизводимость и надежность развертываний."
       }
-    ]
-  },
-  {
-    period: "Jun 2026 - Jul 2026",
-    role: { en: "Golang Developer Intern", ru: "Стажер Golang Developer" },
-    company: "Alem.ai Foundation",
-    details: {
-      en: "Developed collaborative full-scale software solutions and improved algorithmic and system-level engineering skills.",
-      ru: "Создавал совместные полнофункциональные решения и улучшал навыки алгоритмической и системной разработки."
-    },
-    achievements: [
-      { en: "Implemented core data structures and optimized sorting and searching algorithms in Go.", ru: "Реализовал основные структуры данных и оптимизировал алгоритмы сортировки и поиска на Go." },
-      { en: "Applied advanced Go features including pointers, memory semantics, and interfaces.", ru: "Применял продвинутые возможности Go: указатели, семантику памяти и интерфейсы." },
-      { en: "Built automation scripts in Bash to speed up setup and repetitive development tasks.", ru: "Создавал Bash-скрипты для ускорения настройки и повторяющихся задач разработки." },
-      { en: "Collaborated in team mini-projects and a final Go application delivery.", ru: "Участвовал в командных мини-проектах и финальной поставке Go-приложения." }
     ]
   },
   {
