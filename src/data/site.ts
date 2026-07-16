@@ -58,7 +58,7 @@ export const projects: Project[] = [
       en: "A full-stack, production-ready web application for managing student locker assignments. It supports role-based access control, real-time updates via WebSocket, barcode-based student lookup, inclusive-status tracking, and multi-language UI.",
       ru: "Полноценное production-ready веб-приложение для управления выдачей шкафчиков студентам. Поддерживает RBAC, обновления в реальном времени через WebSocket, поиск по barcode, учет льготного статуса и многоязычный интерфейс."
     },
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAdSgbNQ2Kortwt9DmlLg-4YDOjC1bNgldX-avgjqjgLOKYsLBe5q1meZn&s=10",
     tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "WebSocket", "Docker", "React"],
     features: [
       { en: "Role-based access control", ru: "Ролевой доступ" },
@@ -80,7 +80,7 @@ export const projects: Project[] = [
       en: "A simplified Power BI-style data analytics MVP built with FastAPI and React. It supports CSV / Excel upload, dataset summaries, automatic charts, and basic forecasting.",
       ru: "Упрощенный MVP аналитики данных в стиле Power BI, построенный на FastAPI и React. Поддерживает загрузку CSV / Excel, сводки по датасету, авто-графики и базовый прогноз.",
     },
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: "https://cdn-icons-png.flaticon.com/512/9159/9159105.png",
     tech: ["FastAPI", "React", "Pandas", "NumPy", "scikit-learn", "PostgreSQL"],
     features: [
       { en: "CSV / Excel upload", ru: "Загрузка CSV / Excel" },
@@ -102,7 +102,7 @@ export const projects: Project[] = [
       en: "Production-ready FastAPI backend for tracking updates from resources like GitHub repositories, RSS feeds, blogs, docs pages, and generic websites. It includes authentication, role-based authorization, periodic checks, update history, and extensible notifications.",
       ru: "Production-ready FastAPI backend для отслеживания обновлений из GitHub-репозиториев, RSS-лент, блогов, документации и обычных сайтов. Поддерживает аутентификацию, RBAC, периодические проверки, историю изменений и расширяемые уведомления."
     },
-    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://www.linkapp.one/_next/image?url=https%3A%2F%2Fqiy.blob.core.windows.net%2Fblogs%2FLink-App.png&w=1920&q=75",
     tech: ["FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Alembic", "Docker"],
     features: [
       { en: "JWT access and refresh tokens", ru: "JWT access и refresh tokens" },
@@ -116,6 +116,53 @@ export const projects: Project[] = [
 ];
 
 export const experience: ExperienceItem[] = [
+  {
+    period: "Mar 2026 - May 2026",
+    role: { en: "Python Developer", ru: "Python-разработчик" },
+    company: "DataArt",
+    details: {
+      en: "Developed and maintained backend microservices, ensuring seamless communication through REST APIs.",
+      ru: "Разрабатывал и поддерживал бэкенд-микросервисы, обеспечивая бесперебойную связь через REST API."
+    },
+    achievements: [
+      {
+        en: "Optimized ORM performance using eager loading techniques, database indexing, and caching, improving REST API response times by an average of 25–30%.",
+        ru: "Оптимизировал производительность ORM с помощью техник eager loading, индексирования баз данных и кэширования, улучшив время отклика REST API в среднем на 25–30%."
+      },
+      {
+        en: "Implemented asynchronous services and background processing, reducing the execution time of resource-intensive requests by up to 40%.",
+        ru: "Внедрил асинхронные сервисы и фоновую обработку, сократив время выполнения ресурсоемких запросов до 40%."
+      },
+      {
+        en: "Developed REST APIs for core business domains, including users, contracts, contract records, complaints, discussions, and surveys.",
+        ru: "Разработал REST API для ключевых бизнес-доменов, включая пользователей, контракты, записи контрактов, жалобы, обсуждения и опросы."
+      },
+      {
+        en: "Implemented role-based access control (RBAC) and authentication mechanisms using JWT and session-based authentication, ensuring security and scalability.",
+        ru: "Внедрил управление доступом на основе ролей (RBAC) и механизмы аутентификации с использованием JWT и сессий, обеспечив безопасность и масштабируемость."
+      },
+      {
+        en: "Designed and optimized PostgreSQL database schemas to support high-load applications.",
+        ru: "Спроектировал и оптимизировал схемы баз данных PostgreSQL для поддержки высоконагруженных приложений."
+      },
+      {
+        en: "Created and executed custom database migrations for complex business logic changes.",
+        ru: "Создавал и выполнял кастомные миграции баз данных для сложных изменений бизнес-логики."
+      },
+      {
+        en: "Developed and maintained backend microservices, enabling seamless communication through REST APIs.",
+        ru: "Разрабатывал и поддерживал бэкенд-микросервисы, обеспечивая бесперебойную связь через REST API."
+      },
+      {
+        en: "Reduced technical debt by refactoring the codebase and applying SOLID and DRY principles.",
+        ru: "Сократил технический долг путем рефакторинга кодовой базы и применения принципов SOLID и DRY."
+      },
+      {
+        en: "Configured Docker-based development and testing environments, ensuring consistency, reproducibility, and reliable deployments.",
+        ru: "Настроил Docker-окружения для разработки и тестирования, обеспечив согласованность, воспроизводимость и надежность развертываний."
+      }
+    ]
+  },
   {
     period: "Jun 2026 - Jul 2026",
     role: { en: "Golang Developer Intern", ru: "Стажер Golang Developer" },
