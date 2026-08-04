@@ -117,6 +117,37 @@ export const projects: Project[] = [
 
 export const experience: ExperienceItem[] = [
   {
+    period: "Jul 2026",
+    role: { en: "Tester", ru: "Тестировщик" },
+    company: "xVenture",
+    details: {
+      en: "Conducted functional QA for a Telegram Mini App across mobile and desktop platforms.",
+      ru: "Проводил функциональное QA Telegram Mini App на мобильных и десктопных платформах."
+    },
+    achievements: [
+      {
+        en: "Tested core user flows, including onboarding, battle sessions, profile, garage, journey, and other application features.",
+        ru: "Тестировал ключевые пользовательские сценарии: onboarding, battle sessions, profile, garage, journey и другие функции приложения."
+      },
+      {
+        en: "Performed regression testing after each release to ensure existing functionality remained stable.",
+        ru: "Проводил регрессионное тестирование после каждого обновления, чтобы сохранить стабильность существующего функционала."
+      },
+      {
+        en: "Identified, reproduced, and documented defects with clear reproduction steps, expected and actual results, and screenshots or videos.",
+        ru: "Выявлял, воспроизводил и документировал дефекты с четкими шагами воспроизведения, ожидаемым и фактическим результатом, а также скриншотами или видео."
+      },
+      {
+        en: "Tested edge cases such as unstable network connections, rapid repeated taps, app backgrounding and restoring, and empty states.",
+        ru: "Проверял edge cases: нестабильное интернет-соединение, частые повторные нажатия, сворачивание и восстановление приложения, а также пустые состояния."
+      },
+      {
+        en: "Verified newly implemented features before release and coordinated with developers to resolve reported issues on time.",
+        ru: "Проверял новые функции перед релизом и взаимодействовал с разработчиками для своевременного устранения найденных проблем."
+      }
+    ]
+  },
+  {
     period: "Jun 2026 - Jul 2026",
     role: { en: "Golang Developer Intern", ru: "Стажер Golang Developer" },
     company: "Alem.ai Foundation",
