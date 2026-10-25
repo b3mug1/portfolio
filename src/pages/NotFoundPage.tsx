@@ -13,12 +13,12 @@ export default function NotFoundPage() {
   );
 
   return (
-    <div className="mx-auto grid min-h-[60vh] w-[min(800px,90%)] place-items-center py-20 text-center">
+    <div className="mx-auto grid min-h-[60vh] w-[min(800px,calc(100%_-_48px))] place-items-center py-20 text-center">
       <div>
-        <p className="text-sm uppercase tracking-[0.25em] text-muted">Error 404</p>
-        <h1 className="mt-3 text-5xl font-bold text-text">{copy.title}</h1>
+        <p className="eyebrow justify-center">Error 404</p>
+        <h1 className="page-title mt-4">{copy.title}</h1>
         <p className="mt-4 text-muted">{copy.intro}</p>
-        <Link to="/" className="mt-8 inline-block rounded-full bg-gradient-to-r from-primary to-accent px-5 py-3 text-sm font-semibold text-white">
+        <Link to="/" className="button-primary mt-8">
           {copy.back}
         </Link>
       </div>

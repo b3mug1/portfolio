@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { PageHeading } from "@/components/common/PageHeading";
 import { experienceCopy } from "@/data/content";
 import { experience } from "@/data/site";
 import { useLocale } from "@/hooks/useLocale";
@@ -16,28 +17,35 @@ export default function ExperiencePage() {
   );
 
   return (
-    <div className="mx-auto w-[min(980px,90%)] py-20">
-      <h1 className="text-4xl font-bold text-text md:text-5xl">{copy.title}</h1>
-      <p className="mt-4 text-muted">{copy.intro}</p>
+    <div className="page-shell narrow">
+      <PageHeading
+        eyebrow={locale === "en" ? "Work journey" : "Практический опыт"}
+        title={copy.title}
+        intro={copy.intro}
+      />
 
-      <div className="mt-12 border-l border-white/10 pl-6">
+      <div className="experience-total" aria-label={locale === "en" ? "One year of work experience" : "Опыт работы: 1 год"}>
+        <strong>01</strong>
+        <span>{locale === "en" ? "YEAR OF EXPERIENCE" : "ГОД ОПЫТА"}</span>
+      </div>
+
+      <div className="timeline-line">
         {experience.map((item, index) => (
           <motion.article
-            key={`${item.company}-${item.period}`}
-            className="relative mb-8 rounded-3xl border border-white/10 bg-surface/65 p-5"
+            key={item.company}
+            className="experience-card timeline-entry"
             initial={{ opacity: 0, x: -22 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ delay: index * 0.1 }}
           >
-            <span className="absolute -left-[33px] top-8 h-3 w-3 rounded-full bg-primary" />
-            <p className="text-xs uppercase tracking-[0.22em] text-muted">{item.period}</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-muted">{item.period[locale]}</p>
             <h2 className="mt-2 text-2xl font-semibold text-text">{item.role[locale]}</h2>
             <p className="text-muted">{item.company}</p>
             <p className="mt-3 text-muted">{item.details[locale]}</p>
             <ul className="mt-4 space-y-2 text-sm text-muted">
               {item.achievements.map((achievement) => (
-                <li key={achievement[locale]}>• {achievement[locale]}</li>
+                <li key={achievement[locale]}>{achievement[locale]}</li>
               ))}
             </ul>
           </motion.article>

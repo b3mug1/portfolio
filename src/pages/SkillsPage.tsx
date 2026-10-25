@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { PageHeading } from "@/components/common/PageHeading";
 import { skillsCopy } from "@/data/content";
 import { skillCategories } from "@/data/site";
 import { useLocale } from "@/hooks/useLocale";
@@ -16,9 +17,12 @@ export default function SkillsPage() {
   );
 
   return (
-    <div className="mx-auto w-[min(1120px,90%)] py-20">
-      <h1 className="text-4xl font-bold text-text md:text-5xl">{copy.title}</h1>
-      <p className="mt-4 max-w-2xl text-muted">{copy.intro}</p>
+    <div className="page-shell">
+      <PageHeading
+        eyebrow={locale === "en" ? "Engineering toolkit" : "Инструментарий"}
+        title={copy.title}
+        intro={copy.intro}
+      />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category, index) => (

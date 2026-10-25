@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import { ProjectArtwork } from "@/components/common/ProjectArtwork";
 import { projectDetailCopy } from "@/data/content";
 import { projects } from "@/data/site";
 import { useLocale } from "@/hooks/useLocale";
@@ -18,7 +19,7 @@ export default function ProjectDetailPage() {
 
   if (!project) {
     return (
-      <div className="mx-auto w-[min(1120px,90%)] py-24">
+      <div className="page-shell narrow">
         <p className="text-muted">{copy.notFound}</p>
         <Link to="/projects" className="mt-4 inline-flex items-center gap-2 text-primary">
           <ArrowLeft size={14} /> {copy.back}
@@ -28,22 +29,27 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <article className="mx-auto w-[min(980px,90%)] py-20">
+    <article className="page-shell narrow">
       <Link to="/projects" className="inline-flex items-center gap-2 text-sm text-muted hover:text-text">
         <ArrowLeft size={14} /> {copy.back}
       </Link>
 
-      <h1 className="mt-6 text-4xl font-bold text-text">{project.title[locale]}</h1>
-      <p className="mt-3 text-muted">{project.description[locale]}</p>
+      <header className="page-heading mt-7">
+        <p className="eyebrow">{locale === "en" ? "Project / Case study" : "Проект / Кейс"}</p>
+        <h1 className="page-title">{project.title[locale]}</h1>
+        <p className="page-intro">{project.description[locale]}</p>
+      </header>
 
-      <img src={project.image} alt={project.title[locale]} className="mt-8 h-[360px] w-full rounded-3xl object-cover" />
+      <div className="project-detail-art overflow-hidden">
+        <ProjectArtwork project={project} locale={locale} index={projects.findIndex((item) => item.id === project.id)} />
+      </div>
 
       <section className="mt-10 grid gap-8 md:grid-cols-2">
         <div>
           <h2 className="text-2xl font-semibold text-text">{copy.features}</h2>
-          <ul className="mt-4 space-y-2 text-muted">
+          <ul className="mt-4 space-y-3 text-muted">
             {project.features.map((item) => (
-              <li key={item[locale]}>• {item[locale]}</li>
+              <li key={item[locale]} className="flex gap-3"><span className="text-primary">↗</span><span>{item[locale]}</span></li>
             ))}
           </ul>
         </div>
@@ -51,7 +57,7 @@ export default function ProjectDetailPage() {
           <h2 className="text-2xl font-semibold text-text">{copy.stack}</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             {project.tech.map((tech) => (
-              <span key={tech} className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-text">
+            <span key={tech} className="tag-chip">
                 {tech}
               </span>
             ))}
@@ -60,10 +66,10 @@ export default function ProjectDetailPage() {
       </section>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <a href={project.githubUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-text hover:bg-white/5">
+        <a href={project.githubUrl} target="_blank" rel="noreferrer" className="button-secondary">
           <Github size={16} /> {copy.github}
         </a>
-        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-2 text-white">
+        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="button-primary">
           <ExternalLink size={16} /> {copy.live}
         </a>
       </div>

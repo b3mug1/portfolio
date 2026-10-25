@@ -2,6 +2,7 @@ import { Github, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
+import { PageHeading } from "@/components/common/PageHeading";
 import { useToast } from "@/components/ui/Toast";
 import { contactCopy } from "@/data/content";
 import { useLocale } from "@/hooks/useLocale";
@@ -77,18 +78,21 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="mx-auto w-[min(980px,90%)] py-20">
-      <h1 className="text-4xl font-bold text-text md:text-5xl">{copy.title}</h1>
-      <p className="mt-4 max-w-2xl text-muted">{copy.intro}</p>
+    <div className="page-shell narrow">
+      <PageHeading
+        eyebrow={locale === "en" ? "Let’s talk" : "На связи"}
+        title={copy.title}
+        intro={copy.intro}
+      />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <form onSubmit={onSubmit} className="space-y-4 rounded-3xl border border-white/10 bg-surface/70 p-6">
+        <form onSubmit={onSubmit} className="form-panel space-y-4">
           <div>
             <label className="mb-2 block text-sm text-muted">{copy.name}</label>
             <input
               value={form.name}
               onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
-              className="w-full rounded-full border border-white/10 bg-bg/70 px-3 py-2.5 text-sm text-text outline-none focus:border-primary"
+              className="w-full rounded-full px-4 py-3 text-sm outline-none transition"
               placeholder={copy.namePlaceholder}
             />
             {errors.name ? <p className="mt-1 text-xs text-rose-400">{errors.name}</p> : null}
@@ -100,7 +104,7 @@ export default function ContactPage() {
               type="email"
               value={form.email}
               onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
-              className="w-full rounded-full border border-white/10 bg-bg/70 px-3 py-2.5 text-sm text-text outline-none focus:border-primary"
+              className="w-full rounded-full px-4 py-3 text-sm outline-none transition"
               placeholder={copy.emailPlaceholder}
             />
             {errors.email ? <p className="mt-1 text-xs text-rose-400">{errors.email}</p> : null}
@@ -112,7 +116,7 @@ export default function ContactPage() {
               rows={6}
               value={form.message}
               onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))}
-              className="w-full rounded-3xl border border-white/10 bg-bg/70 px-3 py-2.5 text-sm text-text outline-none focus:border-primary"
+              className="w-full rounded-2xl px-4 py-3 text-sm outline-none transition"
               placeholder={copy.messagePlaceholder}
             />
             {errors.message ? <p className="mt-1 text-xs text-rose-400">{errors.message}</p> : null}
@@ -123,19 +127,19 @@ export default function ContactPage() {
           </Button>
         </form>
 
-        <aside className="rounded-3xl border border-white/10 bg-surface/70 p-6">
+        <aside className="contact-panel">
           <h2 className="text-xl font-semibold text-text">{copy.socialTitle}</h2>
           <div className="mt-5 space-y-3">
-            <a href="https://github.com/b3mug1" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
+            <a href="https://github.com/b3mug1" target="_blank" rel="noreferrer" className="contact-link text-muted transition hover:text-text">
               <Github size={18} /> GitHub
             </a>
-            <a href="https://t.me/b3mug1" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
+            <a href="https://t.me/b3mug1" target="_blank" rel="noreferrer" className="contact-link text-muted transition hover:text-text">
               <Send size={18} /> Telegram
             </a>
-            <a href="mailto:intelect3235@gmail.com" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
+            <a href="mailto:intelect3235@gmail.com" className="contact-link text-muted transition hover:text-text">
               <Mail size={18} /> intelect3235@gmail.com
             </a>
-            <a href="tel:+77772380923" className="inline-flex items-center gap-3 text-muted transition hover:text-text">
+            <a href="tel:+77772380923" className="contact-link text-muted transition hover:text-text">
               <Mail size={18} /> +7 777 238 0923
             </a>
           </div>

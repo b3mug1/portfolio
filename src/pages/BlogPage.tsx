@@ -1,4 +1,5 @@
 import { CalendarClock } from "lucide-react";
+import { PageHeading } from "@/components/common/PageHeading";
 import { blogCopy } from "@/data/content";
 import { blogPosts } from "@/data/site";
 import { useLocale } from "@/hooks/useLocale";
@@ -16,13 +17,17 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="mx-auto w-[min(980px,90%)] py-20">
-      <h1 className="text-4xl font-bold text-text md:text-5xl">{copy.title}</h1>
-      <p className="mt-4 max-w-2xl text-muted">{copy.intro}</p>
+    <div className="page-shell narrow">
+      <PageHeading
+        eyebrow={locale === "en" ? "Learning log" : "Обучение и развитие"}
+        title={copy.title}
+        intro={copy.intro}
+      />
 
-      <div className="mt-10 space-y-4">
-        {blogPosts.map((post) => (
-          <article key={post.id} className="rounded-3xl border border-white/10 bg-surface/65 p-5">
+      <div className="grid gap-4 md:grid-cols-2">
+        {blogPosts.map((post, index) => (
+          <article key={post.id} className="certificate-card">
+            <p className="eyebrow">{locale === "en" ? `Certificate 0${index + 1}` : `Сертификат 0${index + 1}`}</p>
             <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted">
               <span className="inline-flex items-center gap-1"><CalendarClock size={14} /> {post.date}</span>
               <span>{post.readTime[locale]}</span>

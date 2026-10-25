@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
+import { PageHeading } from "@/components/common/PageHeading";
 import { aboutCopy } from "@/data/content";
 import { education, journeyTimeline } from "@/data/site";
 import { useLocale } from "@/hooks/useLocale";
@@ -17,11 +18,12 @@ export default function AboutPage() {
   );
 
   return (
-    <div className="mx-auto w-[min(1120px,90%)] py-20">
-      <h1 className="text-4xl font-bold text-text md:text-5xl">{copy.title}</h1>
-      <p className="mt-6 max-w-3xl text-muted">
-        {copy.intro}
-      </p>
+    <div className="page-shell">
+      <PageHeading
+        eyebrow={locale === "en" ? "The story" : "Знакомство"}
+        title={copy.title}
+        intro={copy.intro}
+      />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <Card>
@@ -38,7 +40,7 @@ export default function AboutPage() {
         </Card>
       </div>
 
-      <div className="mt-12">
+      <div className="mt-16">
         <h2 className="text-2xl font-semibold text-text">{copy.educationTitle}</h2>
         <div className="mt-4 grid gap-4">
           {education.map((item) => (
@@ -51,9 +53,9 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="mt-14">
+      <div className="mt-16">
         <h2 className="text-2xl font-semibold text-text">{copy.journeyTitle}</h2>
-        <div className="mt-6 space-y-4 border-l border-white/10 pl-5">
+        <div className="timeline-line mt-6">
           {journeyTimeline.map((entry, index) => (
             <motion.div
               key={entry.year}
@@ -61,9 +63,8 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ delay: index * 0.08 }}
-              className="relative"
+              className="timeline-entry"
             >
-              <span className="absolute -left-[29px] top-2 h-3 w-3 rounded-full bg-primary" />
               <p className="text-xs uppercase tracking-[0.2em] text-muted">{entry.year}</p>
               <p className="mt-1 text-lg font-semibold text-text">{entry.title[locale]}</p>
               <p className="mt-1 text-muted">{entry.text[locale]}</p>
