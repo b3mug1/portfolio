@@ -20,7 +20,7 @@ export type Project = {
 };
 
 export type ExperienceItem = {
-  period: string;
+  period: LocalizedText;
   role: LocalizedText;
   company: string;
   details: LocalizedText;
