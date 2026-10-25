@@ -3,10 +3,9 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navLinks, t } from "@/data/site";
-import { uiCopy } from "@/data/content";
 import { cn } from "@/lib/cn";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import type { ThemeMode } from "@/hooks/useTheme";
 import { useLocale } from "@/hooks/useLocale";
 
@@ -19,77 +18,61 @@ export function Navbar({ mode, onToggleTheme }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const { locale, toggleLocale } = useLocale();
 
+  const navClass = ({ isActive }: { isActive: boolean }) => cn("nav-link", isActive && "active");
+
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-bg/70 backdrop-blur-2xl">
-      <div className="mx-auto flex w-[min(1120px,90%)] items-center justify-between py-4">
-        <Link to="/" className="nav-item-shell inline-flex items-center gap-2 rounded-full px-2 py-2 transition">
-          <img src="/favicon.png" alt={uiCopy[locale].brand} className="h-10 w-10 rounded-xl object-cover" />
-          <span className="sr-only">{uiCopy[locale].brand}</span>
+    <header className="site-header">
+      <div className="nav-inner">
+        <Link to="/" className="brand-lockup" aria-label="Bekzat home">
+          <span className="brand-mark">BK</span>
+          <span className="brand-name">
+            <strong>Murat Bekzat</strong>
+            <span>Software engineer</span>
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex">
+        <nav className="desktop-nav" aria-label="Main navigation">
           {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                cn(
-                  "rounded-full px-3 py-2 text-sm text-muted transition hover:text-text",
-                  "nav-item-shell",
-                  isActive && "bg-white/10 text-text"
-                )
-              }
-            >
+            <NavLink key={link.path} to={link.path} end={link.path === "/"} className={navClass}>
               {t(link.label, locale)}
             </NavLink>
           ))}
-          <ThemeToggle mode={mode} onToggle={onToggleTheme} />
-          <LanguageToggle locale={locale} onToggle={toggleLocale} />
+          <div className="nav-controls">
+            <ThemeToggle mode={mode} onToggle={onToggleTheme} />
+            <LanguageToggle locale={locale} onToggle={toggleLocale} />
+          </div>
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="nav-controls mobile-controls">
           <ThemeToggle mode={mode} onToggle={onToggleTheme} />
           <LanguageToggle locale={locale} onToggle={toggleLocale} />
           <button
-            className="nav-item-shell rounded-full p-2 text-text transition"
-            onClick={() => setOpen((prev) => !prev)}
-            aria-label="Toggle menu"
+            className="menu-toggle"
+            onClick={() => setOpen((current) => !current)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
           >
-            {open ? <X size={18} /> : <Menu size={18} />}
+            {open ? <X size={17} /> : <Menu size={17} />}
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open ? (
-          <motion.aside
-            className="border-t border-white/10 bg-surface/95 px-[5%] py-4 md:hidden"
+          <motion.nav
+            className="mobile-nav"
+            aria-label="Mobile navigation"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.22 }}
           >
-            <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setOpen(false)}
-                  className={({ isActive }) =>
-                    cn(
-                      "nav-item-shell rounded-xl px-3 py-2 text-sm text-muted transition hover:text-text",
-                      isActive && "bg-white/10 text-text"
-                    )
-                  }
-                >
-                  {t(link.label, locale)}
-                </NavLink>
-              ))}
-              <div className="mt-3 flex flex-wrap gap-2">
-                <ThemeToggle mode={mode} onToggle={onToggleTheme} />
-                <LanguageToggle locale={locale} onToggle={toggleLocale} />
-              </div>
-            </div>
-          </motion.aside>
+            {navLinks.map((link) => (
+              <NavLink key={link.path} to={link.path} end={link.path === "/"} className={navClass} onClick={() => setOpen(false)}>
+                {t(link.label, locale)}
+              </NavLink>
+            ))}
+          </motion.nav>
         ) : null}
       </AnimatePresence>
     </header>
