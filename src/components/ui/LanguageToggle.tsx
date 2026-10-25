@@ -11,7 +11,8 @@ export function LanguageToggle({ locale, onToggle }: LanguageToggleProps) {
     <Button
       variant="ghost"
       onClick={onToggle}
-      className="nav-item-shell inline-flex h-10 items-center gap-2 rounded-full px-3 py-0 text-xs font-semibold uppercase tracking-[0.18em] text-text"
+      className="language-toggle inline-flex h-10 items-center gap-2 rounded-full px-3 py-0 text-xs font-semibold uppercase tracking-[0.18em] text-text"
+      aria-label={locale === "en" ? "Switch language to Russian" : "Переключить язык на английский"}
     >
       <span className={locale === "en" ? "text-text" : "text-muted"}>EN</span>
       <span className="h-4 w-px bg-white/10 dark:bg-white/10" />

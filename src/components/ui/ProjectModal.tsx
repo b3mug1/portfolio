@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import type { MouseEvent } from "react";
+import { ProjectArtwork } from "@/components/common/ProjectArtwork";
 import type { Project } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { projectDetailCopy } from "@/data/content";
@@ -18,20 +19,20 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     <AnimatePresence>
       {project ? (
         <motion.div
-          className="fixed inset-0 z-50 grid place-items-center bg-black/70 px-4 backdrop-blur-sm"
+          className="project-modal-backdrop fixed inset-0 z-50 grid place-items-center bg-black/70 px-4 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            className="w-full max-w-3xl rounded-2xl border border-white/10 bg-surface p-6 shadow-glow"
+            className="project-modal-card w-full max-w-3xl rounded-2xl border border-white/10 bg-surface p-6 shadow-glow"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.96, opacity: 0 }}
             onClick={(event: MouseEvent) => event.stopPropagation()}
           >
-            <img src={project.image} alt={project.title[locale]} className="h-56 w-full rounded-xl object-cover" />
+            <ProjectArtwork project={project} locale={locale} index={0} />
             <h3 className="mt-5 text-2xl font-bold text-text">{project.title[locale]}</h3>
             <p className="mt-2 text-muted">{project.description[locale]}</p>
             <div className="mt-4 flex flex-wrap gap-2">
