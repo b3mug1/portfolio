@@ -117,7 +117,65 @@ export const projects: Project[] = [
 
 export const experience: ExperienceItem[] = [
   {
-    period: "Jul 2026",
+    period: { en: "Oct 2026 — Oct 2026 · 1 month", ru: "Октябрь 2026 — октябрь 2026 · 1 месяц" },
+    role: { en: "Telegram Bot Developer", ru: "Разработчик Telegram-ботов" },
+    company: "Stratton",
+    details: {
+      en: "Developed and maintained Python Telegram bots with Aiogram 3, from application architecture and user flows to production deployment.",
+      ru: "Разрабатывал и сопровождал Telegram-ботов на Python с Aiogram 3 — от архитектуры приложений и пользовательских сценариев до production-развертывания."
+    },
+    achievements: [
+      {
+        en: "Integrated PostgreSQL and external APIs, and built asynchronous processes for reliable data handling.",
+        ru: "Интегрировал PostgreSQL и внешние API, настраивал асинхронные процессы для надежной обработки данных."
+      },
+      {
+        en: "Implemented FSM-based conversation flows, analytics and logging, error handling, and performance improvements.",
+        ru: "Реализовывал FSM-сценарии, аналитику и логирование, обработку ошибок и оптимизацию производительности."
+      },
+      {
+        en: "Contributed to testing, debugging, and production releases.",
+        ru: "Участвовал в тестировании, отладке и развертывании в production-среде."
+      }
+    ]
+  },
+  {
+    period: { en: "Sep 2026 — Present · 2 months", ru: "Сентябрь 2026 — настоящее время · 2 месяца" },
+    role: { en: "Backend Developer", ru: "Backend-разработчик" },
+    company: "WONK",
+    details: {
+      en: "Develop and maintain RESTful APIs for an EdTech SaaS platform covering school monitoring, analytics, administration, and curriculum planning.",
+      ru: "Разрабатываю и поддерживаю RESTful API для EdTech SaaS-платформы: мониторинг школ, аналитика, административное управление и планирование учебных программ."
+    },
+    achievements: [
+      {
+        en: "Implement a Router → Service → Repository architecture to separate business logic from database and HTTP layers.",
+        ru: "Внедряю архитектуру Router → Service → Repository, отделяя бизнес-логику от слоя базы данных и HTTP-контроллеров."
+      },
+      {
+        en: "Design and optimize PostgreSQL queries with SQLAlchemy, including filtering, pagination, secure search, and escaping special LIKE / ILIKE characters.",
+        ru: "Проектирую и оптимизирую запросы PostgreSQL через SQLAlchemy: фильтрация, пагинация, безопасный поиск и экранирование специальных символов LIKE / ILIKE."
+      },
+      {
+        en: "Write unit, API, and end-to-end integration tests with Pytest using an isolated PostgreSQL test database.",
+        ru: "Пишу unit-, API- и end-to-end интеграционные тесты на Pytest с отдельной тестовой базой PostgreSQL."
+      },
+      {
+        en: "Audit code and profile queries to remove N+1 patterns and redundant fetches, refactor legacy code, and improve maintainability.",
+        ru: "Провожу аудит кода и профилирование запросов, устраняю N+1 и повторные выборки, рефакторю legacy-код и улучшаю его поддерживаемость."
+      },
+      {
+        en: "Configure Ruff linting and formatting and enforce checks through pre-commit hooks.",
+        ru: "Настраиваю линтинг и форматирование Ruff, подключаю проверки через pre-commit hooks."
+      },
+      {
+        en: "Collaborate through Git Flow, feature branches, code reviews, and structured pull requests.",
+        ru: "Работаю по Git Flow: веду feature-ветки, участвую в code review и оформляю структурированные pull request."
+      }
+    ]
+  },
+  {
+    period: { en: "Jul 2026", ru: "Июль 2026" },
     role: { en: "Tester", ru: "Тестировщик" },
     company: "xVenture",
     details: {
@@ -148,7 +206,7 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
-    period: "Jun 2026 - Jul 2026",
+    period: { en: "Jun 2026 — Jul 2026", ru: "Июнь 2026 — июль 2026" },
     role: { en: "Golang Developer Intern", ru: "Стажер Golang Developer" },
     company: "Alem.ai Foundation",
     details: {
@@ -163,7 +221,7 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
-    period: "Mar 2026 - May 2026",
+    period: { en: "Mar 2026 — May 2026", ru: "Март 2026 — май 2026" },
     role: { en: "Python Developer", ru: "Python-разработчик" },
     company: "DataArt",
     details: {
@@ -210,7 +268,7 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
-    period: "Jan 2026 - Mar 2026",
+    period: { en: "Jan 2026 — Mar 2026", ru: "Январь 2026 — март 2026" },
     role: { en: "Python Developer", ru: "Python-разработчик" },
     company: "Zimala",
     details: {
@@ -225,7 +283,7 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
-    period: "Oct 2025 - Dec 2025",
+    period: { en: "Oct 2025 — Dec 2025", ru: "Октябрь 2025 — декабрь 2025" },
     role: { en: "Tester", ru: "Тестировщик" },
     company: "Talap Academy",
     details: {
