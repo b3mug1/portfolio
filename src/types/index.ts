@@ -31,7 +31,7 @@ export type BlogPost = {
   id: string;
   title: LocalizedText;
   excerpt: LocalizedText;
-  date: string;
+  date: LocalizedText;
   readTime: LocalizedText;
   tags: string[];
 };

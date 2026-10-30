@@ -301,13 +301,24 @@ export const experience: ExperienceItem[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "ccna-introduction-to-networks",
+    title: { en: "CCNA: Introduction to Networks", ru: "CCNA: Introduction to Networks" },
+    excerpt: {
+      en: "Completed through the Cisco Networking Academy program at Astana IT University. Instructor: Laura Aldasheva.",
+      ru: "Курс Cisco Networking Academy успешно завершён в Astana IT University. Преподаватель: Laura Aldasheva."
+    },
+    date: { en: "30 Oct 2026", ru: "30 октября 2026" },
+    readTime: { en: "Certificate", ru: "Сертификат" },
+    tags: ["Cisco Networking Academy", "CCNA", "Networking", "Astana IT University"]
+  },
+  {
     id: "it-essentials-cisco",
     title: { en: "IT Essentials - Cisco Networking Academy", ru: "IT Essentials - Cisco Networking Academy" },
     excerpt: {
       en: "Core IT fundamentals including system basics, networking, and troubleshooting.",
       ru: "Базовые IT-знания: основы систем, сети и устранение неисправностей."
     },
-    date: "2026",
+    date: { en: "2026", ru: "2026" },
     readTime: { en: "Certificate", ru: "Сертификат" },
     tags: ["Cisco", "IT Fundamentals"]
   },
@@ -318,7 +329,7 @@ export const blogPosts: BlogPost[] = [
       en: "Introduction to practical AI concepts and applied machine learning contexts.",
       ru: "Введение в практические AI-концепции и прикладные сценарии машинного обучения."
     },
-    date: "2025",
+    date: { en: "2025", ru: "2025" },
     readTime: { en: "Certificate", ru: "Сертификат" },
     tags: ["AI", "Huawei ICT"]
   },
@@ -329,7 +340,7 @@ export const blogPosts: BlogPost[] = [
       en: "Hands-on Linux fundamentals for development and infrastructure workflows.",
       ru: "Практические основы Linux для разработки и инфраструктурных процессов."
     },
-    date: "2025",
+    date: { en: "2025", ru: "2025" },
     readTime: { en: "Certificate", ru: "Сертификат" },
     tags: ["Linux", "Cisco"]
   }

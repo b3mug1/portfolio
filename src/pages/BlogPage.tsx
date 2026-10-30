@@ -29,7 +29,7 @@ export default function BlogPage() {
           <article key={post.id} className="certificate-card">
             <p className="eyebrow">{locale === "en" ? `Certificate 0${index + 1}` : `Сертификат 0${index + 1}`}</p>
             <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted">
-              <span className="inline-flex items-center gap-1"><CalendarClock size={14} /> {post.date}</span>
+              <span className="inline-flex items-center gap-1"><CalendarClock size={14} /> {post.date[locale]}</span>
               <span>{post.readTime[locale]}</span>
             </div>
             <h2 className="mt-3 text-2xl font-semibold text-text">{post.title[locale]}</h2>
