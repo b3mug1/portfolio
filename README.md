@@ -28,7 +28,7 @@
 
 This is a fast, SEO-friendly single-page application (SPA) that presents projects, experience, skills, blog posts / certificates and a contact form. The UI defaults to a premium dark theme with an optional light mode, supports English and Russian locales, and ships with smooth Framer Motion page transitions and micro-interactions.
 
-**Live demo:** [https://b3mug1.dev](https://b3mug1.dev)
+**Live demo:** [https://portfolio.b3mug1.dev](https://portfolio.b3mug1.dev)
 
 ## Tech stack
 

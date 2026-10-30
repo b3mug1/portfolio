@@ -67,7 +67,7 @@ export const projects: Project[] = [
       { en: "Inclusive-status tracking", ru: "Учет льготного статуса" }
     ],
     githubUrl: "https://github.com/b3mug1",
-    liveUrl: "https://b3mug1.dev/projects/locker-management-system"
+    liveUrl: "https://portfolio.b3mug1.dev/projects/locker-management-system"
   },
   {
     id: "csvision",
