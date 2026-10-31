@@ -433,6 +433,36 @@ export const blogPosts: BlogPost[] = [
     expiration: { en: "Does not expire", ru: "Без срока действия" }
   },
   {
+    id: "huawei-overview-of-ai",
+    title: { en: "Overview of AI", ru: "Overview of AI" },
+    excerpt: {
+      en: "Huawei confirms successful completion of the Overview of AI course.",
+      ru: "Huawei подтверждает успешное завершение курса Overview of AI."
+    },
+    date: { en: "8 Jun 2025", ru: "8 июня 2025" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["AI", "Artificial Intelligence", "Huawei ICT Academy", "Machine Learning", "Strong AI"],
+    image: "https://images.credly.com/size/160x160/images/08aeec7e-bcc9-4ef8-a84e-1f3cf27ff5e8/image.png",
+    credentialId: "daef47b6-8c6e-4aeb-a22c-84abc5697848",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/daef47b6-8c6e-4aeb-a22c-84abc5697848",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
+  },
+  {
+    id: "huawei-search-and-ai",
+    title: { en: "Search and AI", ru: "Search and AI" },
+    excerpt: {
+      en: "Huawei confirms successful completion of the Search and AI course.",
+      ru: "Huawei подтверждает успешное завершение курса Search and AI."
+    },
+    date: { en: "7 Jun 2025", ru: "7 июня 2025" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["AI", "Artificial Intelligence", "Huawei ICT Academy", "Neural Network", "Tree Search"],
+    image: "https://images.credly.com/size/160x160/images/42c51b42-7299-4d35-bd1f-44a3433aacad/image.png",
+    credentialId: "3bcc28cd-da3c-4f50-bf06-54f83db14a15",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/3bcc28cd-da3c-4f50-bf06-54f83db14a15",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
+  },
+  {
     id: "linux-essentials",
     title: { en: "Linux Essentials", ru: "Linux Essentials" },
     excerpt: {
