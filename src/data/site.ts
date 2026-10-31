@@ -336,7 +336,7 @@ export const experience: ExperienceItem[] = [
   {
     period: { en: "Jan 2026 — Mar 2026", ru: "Январь 2026 — март 2026" },
     role: { en: "Python Developer", ru: "Python-разработчик" },
-    company: "Zimala",
+    company: "Zimalab",
     details: {
       en: "Developed and optimized backend services with Python and FastAPI for web products.",
       ru: "Разрабатывал и оптимизировал backend-сервисы на Python и FastAPI для веб-продуктов."
