@@ -419,25 +419,32 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "huawei-ai-applications",
-    title: { en: "Artificial Intelligence and Applications - Huawei ICT Academy", ru: "Artificial Intelligence and Applications - Huawei ICT Academy" },
+    title: { en: "Artificial Intelligence Technology and Applications", ru: "Artificial Intelligence Technology and Applications" },
     excerpt: {
-      en: "Introduction to practical AI concepts and applied machine learning contexts.",
-      ru: "Введение в практические AI-концепции и прикладные сценарии машинного обучения."
+      en: "Huawei confirms successful completion of the Artificial Intelligence Technology and Applications course.",
+      ru: "Huawei подтверждает успешное завершение курса Artificial Intelligence Technology and Applications."
     },
-    date: { en: "2025", ru: "2025" },
-    readTime: { en: "Certificate", ru: "Сертификат" },
-    tags: ["AI", "Huawei ICT"]
+    date: { en: "9 Jun 2025", ru: "9 июня 2025" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["Huawei", "Deep Learning", "Python", "Quantum Computing", "Reinforcement Learning", "AI", "Algorithm", "Artificial Intelligence", "Ascend", "Huawei Cloud", "Huawei ICT Academy", "Machine Learning", "Mindspore"],
+    image: "https://images.credly.com/size/160x160/images/f12fdc7a-0631-4939-8859-8dec15e2616a/image.png",
+    credentialId: "abc845cb-e8ba-42e1-9d7b-594ba8f93eb0",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/abc845cb-e8ba-42e1-9d7b-594ba8f93eb0",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
   },
   {
     id: "linux-essentials",
-    title: { en: "Linux Essentials - Cisco Networking Academy", ru: "Linux Essentials - Cisco Networking Academy" },
+    title: { en: "Linux Essentials", ru: "Linux Essentials" },
     excerpt: {
-      en: "Hands-on Linux fundamentals for development and infrastructure workflows.",
-      ru: "Практические основы Linux для разработки и инфраструктурных процессов."
+      en: "Cisco, in collaboration with NDG, verifies the learner's knowledge of Linux fundamentals, command-line tools, system security, permissions, and file management.",
+      ru: "Cisco совместно с NDG подтверждает знания основ Linux: командной строки, безопасности системы, прав доступа и управления файлами."
     },
-    date: { en: "2025", ru: "2025" },
-    readTime: { en: "Certificate", ru: "Сертификат" },
-    tags: ["Linux", "Cisco"]
+    date: { en: "15 Feb 2026", ru: "15 февраля 2026" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["Cisco", "NDG", "Linux", "File Management", "Basic Hardware Concepts", "Basic Scripting", "Closed Source Applications", "Command Line", "Creating/Restoring Backups", "Linux OS Components", "Open Source Applications", "System Security", "User/Group Permissions"],
+    credentialId: "6f889a82-4c5e-4e07-bab3-8e7e89211775",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/6f889a82-4c5e-4e07-bab3-8e7e89211775",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
   }
 ];
 
