@@ -34,6 +34,10 @@ export type BlogPost = {
   date: LocalizedText;
   readTime: LocalizedText;
   tags: string[];
+  image?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  expiration?: LocalizedText;
 };
 
 export type EducationItem = {

@@ -367,6 +367,35 @@ export const experience: ExperienceItem[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "aws-academy-cloud-developing",
+    title: { en: "AWS Academy Graduate - Cloud Developing - Training Badge", ru: "AWS Academy Graduate - Cloud Developing - Training Badge" },
+    excerpt: {
+      en: "Earners of this badge have completed the AWS Academy Cloud Developing course.",
+      ru: "Обладатель бейджа завершил курс AWS Academy Cloud Developing."
+    },
+    date: { en: "31 Oct 2026", ru: "31 октября 2026" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["Amazon Web Services Training and Certification", "AWS", "AWS Cloud Computing", "Developing On AWS"],
+    image: "https://images.credly.com/size/160x160/images/bb3211c0-a562-44ec-a8b5-df54deb0e5e9/blob",
+    credentialId: "f57f5ae4-8074-4907-b140-347c6a2edf3f",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/f57f5ae4-8074-4907-b140-347c6a2edf3f",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
+  },
+  {
+    id: "aws-academy-cloud-foundations",
+    title: { en: "AWS Academy Graduate - Cloud Foundations - Training Badge", ru: "AWS Academy Graduate - Cloud Foundations - Training Badge" },
+    excerpt: {
+      en: "Earners of this badge have taken the AWS Academy Cloud Foundations course.",
+      ru: "Обладатель бейджа прошёл курс AWS Academy Cloud Foundations."
+    },
+    date: { en: "5 Oct 2026", ru: "5 октября 2026" },
+    readTime: { en: "Training Badge", ru: "Учебный бейдж" },
+    tags: ["Amazon Web Services Training and Certification", "AWS Architecture", "AWS Cloud", "AWS Core Services", "AWS Pricing", "AWS Support"],
+    credentialId: "5920a85a-48b6-4b8b-998d-2738f860efcf",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/5920a85a-48b6-4b8b-998d-2738f860efcf",
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
+  },
+  {
     id: "ccna-introduction-to-networks",
     title: { en: "CCNA: Introduction to Networks", ru: "CCNA: Introduction to Networks" },
     excerpt: {
