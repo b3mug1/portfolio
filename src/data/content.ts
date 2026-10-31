@@ -22,7 +22,7 @@ export const uiCopy = {
 export const homeCopy = {
   en: {
     eyebrow: "Backend Developer Portfolio",
-    title: "Hi, I\'m Murat Bekzat.",
+    title: "Hi, I'm Murat Bekzat.",
     subtitle: "Python Developer and Software Engineering Student",
     description:
       "I am a 3rd-year Software Engineering student at Astana IT University, graduating in 2027. I build scalable web applications and RESTful APIs with Python, FastAPI, PostgreSQL, MongoDB, Docker, and Git.",
@@ -146,7 +146,7 @@ export const blogCopy = {
 export const contactCopy = {
   en: {
     title: "Contact",
-    intro: "Let\'s discuss internship opportunities, junior backend roles, or student project collaboration.",
+    intro: "Let's discuss internship opportunities, junior backend roles, or student project collaboration.",
     name: "Name",
     email: "Email",
     message: "Message",

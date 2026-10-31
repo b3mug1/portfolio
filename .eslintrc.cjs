@@ -9,6 +9,6 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh", "@typescript-eslint"],
   rules: {
-    "react-refresh/only-export-components": "warn"
+    "react-refresh/only-export-components": ["warn", { allowExportNames: ["useLocale", "useToast"] }]
   }
 };
