@@ -112,6 +112,72 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/b3mug1/link_tracker",
     liveUrl: "https://github.com/b3mug1/link_tracker"
+  },
+  {
+    id: "cyberoom",
+    title: { en: "Cyberoom", ru: "Cyberoom" },
+    summary: {
+      en: "A gaming club booking platform with computer availability, time-based pricing, and staff workflows.",
+      ru: "Платформа бронирования компьютерных клубов с расписанием, тарифами и рабочими кабинетами персонала."
+    },
+    description: {
+      en: "A full-stack booking platform built with FastAPI and Next.js. It includes club discovery, computer selection, conflict-safe reservations, role-based owner and staff dashboards, reviews, memberships, and booking notifications.",
+      ru: "Full-stack платформа бронирования на FastAPI и Next.js. В проекте есть поиск клубов, выбор компьютера, защита от пересечения бронирований, кабинеты владельца и персонала, отзывы, абонементы и уведомления."
+    },
+    image: "",
+    tech: ["FastAPI", "Next.js", "PostgreSQL", "SQLAlchemy", "Redis", "Docker"],
+    features: [
+      { en: "Conflict-safe computer reservations", ru: "Бронирование компьютеров без пересечений" },
+      { en: "Owner and staff dashboards", ru: "Кабинеты владельца и персонала" },
+      { en: "Time-based tariffs and memberships", ru: "Тарифы по времени и абонементы" },
+      { en: "Reviews, waitlists, and notifications", ru: "Отзывы, лист ожидания и уведомления" }
+    ],
+    githubUrl: "https://github.com/b3mug1/cyberoom",
+    liveUrl: "https://github.com/b3mug1/cyberoom"
+  },
+  {
+    id: "universal-ai-quiz-solver",
+    title: { en: "Universal AI Quiz Solver", ru: "Universal AI Quiz Solver" },
+    summary: {
+      en: "A Chrome extension and FastAPI service that explain suggested answers for authorized practice quizzes.",
+      ru: "Расширение Chrome и FastAPI-сервис с подсказками и объяснениями для учебных тестов."
+    },
+    description: {
+      en: "A Manifest V3 browser extension backed by FastAPI and Gemini. It reads supported question controls, requests structured suggestions, and shows explanations with a model confidence estimate. It is designed for authorized practice and does not submit quizzes.",
+      ru: "Расширение Chrome Manifest V3 с backend на FastAPI и Gemini. Оно распознаёт поддерживаемые поля вопросов, получает структурированные подсказки и показывает объяснения с оценкой уверенности модели. Предназначено для разрешённых тренировочных тестов и не отправляет ответы."
+    },
+    image: "",
+    tech: ["Python", "FastAPI", "Chrome Extension", "Gemini", "SQLite", "PostgreSQL"],
+    features: [
+      { en: "Structured answer suggestions with explanations", ru: "Структурированные подсказки с объяснениями" },
+      { en: "Dynamic page and open Shadow DOM scanning", ru: "Поиск вопросов на динамических страницах и в открытом Shadow DOM" },
+      { en: "Optional local answer cache", ru: "Опциональный локальный кэш ответов" },
+      { en: "Does not submit quizzes", ru: "Не отправляет ответы в тест" }
+    ],
+    githubUrl: "https://github.com/b3mug1/quiz-solver/tree/main/universal-ai-quiz-solver",
+    liveUrl: "https://github.com/b3mug1/quiz-solver/tree/main/universal-ai-quiz-solver"
+  },
+  {
+    id: "study-buddy",
+    title: { en: "Study Buddy", ru: "Study Buddy" },
+    summary: {
+      en: "A university collaboration app for finding study partners, organizing groups, and tracking study goals.",
+      ru: "Приложение для поиска партнёров по учёбе, учебных групп и совместных занятий."
+    },
+    description: {
+      en: "A student collaboration platform with a React and Vite frontend, FastAPI backend, and PostgreSQL database. Students can manage profiles, discover compatible study partners, organize groups and sessions, chat, share materials, and track weekly goals.",
+      ru: "Платформа для студентов на React и Vite, FastAPI и PostgreSQL. Пользователи могут вести профили, находить партнёров по интересам и расписанию, создавать группы и занятия, общаться, делиться материалами и отслеживать учебные цели."
+    },
+    image: "",
+    tech: ["React", "TypeScript", "FastAPI", "PostgreSQL", "WebSocket", "Docker"],
+    features: [
+      { en: "Study partner discovery and groups", ru: "Поиск партнёров и учебные группы" },
+      { en: "Messaging and study sessions", ru: "Переписка и совместные занятия" },
+      { en: "Shared materials and focus timers", ru: "Общие материалы и таймеры фокусировки" },
+      { en: "Weekly goals and progress tracking", ru: "Еженедельные цели и отслеживание прогресса" }
+    ],
+    githubUrl: "https://github.com/b3mug1/study-buddy",
+    liveUrl: "https://study.b3mug1.dev/"
   }
 ];
 

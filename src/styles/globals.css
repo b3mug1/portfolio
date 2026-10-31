@@ -305,9 +305,13 @@ html.light .text-slate-100 { color: rgb(var(--color-text)); }
 .project-art::after { position: absolute; z-index: -1; top: -96px; right: -36px; width: 205px; height: 205px; border: 1px solid rgba(var(--color-primary), .28); border-radius: 50%; box-shadow: 0 0 0 20px rgba(var(--color-primary), .04), 0 0 0 48px rgba(var(--color-primary), .028); content: ""; }
 .project-art[data-project="csvision"] { background: #131c23; }.project-art[data-project="csvision"]::after { border-color: rgba(121, 201, 255, .4); box-shadow: 0 0 0 20px rgba(121,201,255,.055), 0 0 0 48px rgba(121,201,255,.03); }
 .project-art[data-project="link-tracker"] { background: #211a13; }.project-art[data-project="link-tracker"]::after { border-color: rgba(244, 178, 105, .4); box-shadow: 0 0 0 20px rgba(244,178,105,.05), 0 0 0 48px rgba(244,178,105,.03); }
+.project-art[data-project="cyberoom"] { background: #171522; }.project-art[data-project="cyberoom"]::after { border-color: rgba(177, 145, 255, .4); box-shadow: 0 0 0 20px rgba(177,145,255,.055), 0 0 0 48px rgba(177,145,255,.03); }
+.project-art[data-project="universal-ai-quiz-solver"] { background: #10201d; }.project-art[data-project="universal-ai-quiz-solver"]::after { border-color: rgba(105, 232, 194, .4); box-shadow: 0 0 0 20px rgba(105,232,194,.055), 0 0 0 48px rgba(105,232,194,.03); }
+.project-art[data-project="study-buddy"] { background: #20171a; }.project-art[data-project="study-buddy"]::after { border-color: rgba(255, 151, 172, .4); box-shadow: 0 0 0 20px rgba(255,151,172,.055), 0 0 0 48px rgba(255,151,172,.03); }
 .art-meta { display: flex; justify-content: space-between; color: rgba(238,244,227,.58); font-family: "DM Mono", monospace; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; }
 .art-meta b { color: rgb(var(--color-primary)); font-weight: 400; }
 .project-art[data-project="csvision"] .art-meta b { color: #83cfff; }.project-art[data-project="link-tracker"] .art-meta b { color: #f2b66f; }
+.project-art[data-project="cyberoom"] .art-meta b { color: #c4aaff; }.project-art[data-project="universal-ai-quiz-solver"] .art-meta b { color: #76e6c5; }.project-art[data-project="study-buddy"] .art-meta b { color: #ff9bb2; }
 .art-display { display: flex; align-items: end; justify-content: space-between; gap: 10px; }
 .art-title { max-width: 70%; color: #f1f4ec; font-size: clamp(19px, 2vw, 27px); font-weight: 650; letter-spacing: -.07em; line-height: .98; }
 .art-glyph { display: flex; height: 50px; align-items: end; gap: 4px; }
@@ -315,6 +319,9 @@ html.light .text-slate-100 { color: rgb(var(--color-text)); }
 .art-glyph i:nth-child(1) { height: 15px; }.art-glyph i:nth-child(2) { height: 25px; }.art-glyph i:nth-child(3) { height: 35px; }.art-glyph i:nth-child(4) { height: 47px; }
 .project-art[data-project="link-tracker"] .art-glyph i { border-color: rgba(244,178,105,.72); background: rgba(244,178,105,.19); }
 .project-art[data-project="csvision"] .art-glyph i { border-color: rgba(131,207,255,.72); background: rgba(131,207,255,.19); }
+.project-art[data-project="cyberoom"] .art-glyph i { border-color: rgba(196,170,255,.72); background: rgba(196,170,255,.19); }
+.project-art[data-project="universal-ai-quiz-solver"] .art-glyph i { border-color: rgba(118,230,197,.72); background: rgba(118,230,197,.19); }
+.project-art[data-project="study-buddy"] .art-glyph i { border-color: rgba(255,155,178,.72); background: rgba(255,155,178,.19); }
 
 .github-panel { display: grid; align-items: center; gap: 28px; grid-template-columns: 1fr auto; border: 1px solid var(--line-strong); border-radius: 22px; background: linear-gradient(115deg, rgba(var(--color-primary), .095), var(--panel) 47%); padding: 27px; }
 .github-panel h3 { margin: 9px 0 0; color: rgb(var(--color-text)); font-size: 24px; letter-spacing: -.055em; }

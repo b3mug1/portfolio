@@ -11,7 +11,7 @@ export function ProjectArtwork({ project, locale, index = 0 }: ProjectArtworkPro
     <div className="project-art" data-project={project.id} aria-hidden="true">
       <div className="art-meta">
         <span>{locale === "en" ? "Selected system" : "Система / кейс"}</span>
-        <b>0{index + 1} / 03</b>
+        <b>{String(index + 1).padStart(2, "0")} / 06</b>
       </div>
       <div className="art-display">
         <span className="art-title">{project.title[locale]}</span>
