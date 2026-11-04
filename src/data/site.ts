@@ -367,6 +367,24 @@ export const experience: ExperienceItem[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "hackalem-ai-guinness-record",
+    title: {
+      en: "HackAlem AI — Guinness World Records Certificate",
+      ru: "HackAlem AI — Рекорд Гиннесса (Сертификат участника)"
+    },
+    excerpt: {
+      en: "Official certificate of participation in HackAlem AI in Astana, Kazakhstan, which achieved the official GUINNESS WORLD RECORDS® title for \"Most Participants in an Agentic AI Hackathon\" (2,415 participants). Supported by OpenAI, NVIDIA, and Astana Hub.",
+      ru: "Официальный сертификат участника HackAlem AI в Астане, установившего мировой рекорд GUINNESS WORLD RECORDS® в номинации «Most Participants in an Agentic AI Hackathon» (2 415 участников). Проведен при поддержке OpenAI, NVIDIA и Astana Hub."
+    },
+    date: { en: "14 Oct 2026", ru: "14 октября 2026" },
+    readTime: { en: "World Record Certificate", ru: "Сертификат рекорда" },
+    tags: ["HackAlem AI", "Guinness World Records", "Agentic AI", "Hackathon", "OpenAI", "NVIDIA", "Astana Hub"],
+    image: "/certificates/hackalem-ai.jpg",
+    credentialUrl: "/certificates/hackalem-ai.jpg",
+    credentialUrlLabel: { en: "View full certificate", ru: "Посмотреть сертификат" },
+    expiration: { en: "Does not expire", ru: "Без срока действия" }
+  },
+  {
     id: "aws-academy-cloud-developing",
     title: { en: "AWS Academy Graduate - Cloud Developing - Training Badge", ru: "AWS Academy Graduate - Cloud Developing - Training Badge" },
     excerpt: {

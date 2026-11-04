@@ -1,0 +1,1 @@
+import{j as e}from"./index-lclGN4J3.js";function n({eyebrow:a,title:s,intro:r}){return e.jsxs("header",{className:"page-heading",children:[e.jsx("p",{className:"eyebrow",children:a}),e.jsx("h1",{className:"page-title",children:s}),e.jsx("p",{className:"page-intro",children:r})]})}export{n as P};

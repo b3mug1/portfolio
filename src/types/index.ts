@@ -37,6 +37,7 @@ export type BlogPost = {
   image?: string;
   credentialId?: string;
   credentialUrl?: string;
+  credentialUrlLabel?: LocalizedText;
   expiration?: LocalizedText;
 };
 

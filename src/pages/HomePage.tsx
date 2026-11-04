@@ -28,7 +28,7 @@ export default function HomePage() {
   useEffect(() => {
     let isActive = true;
     const refreshStats = async () => {
-      const stats = await fetchGithubStats("b3mug1", import.meta.env.VITE_GITHUB_TOKEN);
+      const stats = await fetchGithubStats("b3mug1");
       if (isActive && stats) setGithubStats(stats);
     };
 

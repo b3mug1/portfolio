@@ -28,12 +28,24 @@ export default function BlogPage() {
         {blogPosts.map((post, index) => (
           <article key={post.id} className="certificate-card">
             {post.image ? (
-              <img
-                src={post.image}
-                alt={post.title[locale]}
-                loading="lazy"
-                className="mb-4 h-20 w-20 rounded-xl bg-white/5 object-contain p-2"
-              />
+              <a
+                href={post.credentialUrl || post.image}
+                target="_blank"
+                rel="noreferrer"
+                className="group/thumb mb-4 block overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:border-white/25"
+                title={locale === "en" ? "Click to view certificate" : "Нажмите, чтобы открыть сертификат"}
+              >
+                <img
+                  src={post.image}
+                  alt={post.title[locale]}
+                  loading="lazy"
+                  className={
+                    post.image.includes("credly.com")
+                      ? "h-20 w-20 object-contain p-2"
+                      : "max-h-56 w-full object-contain p-1 transition-transform duration-300 group-hover/thumb:scale-[1.02]"
+                  }
+                />
+              </a>
             ) : null}
             <p className="eyebrow">{locale === "en" ? `Certificate 0${index + 1}` : `Сертификат 0${index + 1}`}</p>
             <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted">
@@ -64,7 +76,15 @@ export default function BlogPage() {
                 className="project-link mt-5 inline-flex items-center gap-2"
               >
                 <ExternalLink size={14} />
-                {locale === "en" ? "View badge on Credly" : "Открыть бейдж в Credly"}
+                {post.credentialUrlLabel
+                  ? post.credentialUrlLabel[locale]
+                  : post.credentialUrl.includes("credly.com")
+                  ? locale === "en"
+                    ? "View badge on Credly"
+                    : "Открыть бейдж в Credly"
+                  : locale === "en"
+                  ? "View certificate"
+                  : "Посмотреть сертификат"}
               </a>
             ) : null}
           </article>

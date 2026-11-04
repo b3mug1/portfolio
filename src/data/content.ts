@@ -135,11 +135,11 @@ export const skillsCopy = {
 export const blogCopy = {
   en: {
     title: "Certificates",
-    intro: "Learning milestones from Cisco Networking Academy and Huawei ICT Academy."
+    intro: "Achievements from hackathons, Cisco Networking Academy, AWS Academy, and Huawei ICT Academy."
   },
   ru: {
     title: "Сертификаты",
-    intro: "Образовательные достижения Cisco Networking Academy и Huawei ICT Academy."
+    intro: "Достижения на хакатонах и сертификаты Cisco Networking Academy, AWS Academy и Huawei ICT Academy."
   }
 } satisfies Record<Locale, Record<string, string>>;
 
